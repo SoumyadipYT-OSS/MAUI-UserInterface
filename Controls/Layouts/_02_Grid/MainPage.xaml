@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_02_Grid.MainPage"
+             BackgroundColor="#f0f0f0">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="10">
+            <!-- Header Label -->
+            <Label Text="Advanced Grid Layout Example"
+               FontSize="24"
+               TextColor="White"
+               BackgroundColor="#2196F3"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="10" />
+
+            <!-- Description for Grid Layout -->
+            <Label Text="This example demonstrates advanced features of the Grid layout, including nested grids, spanning, alignment, and more."
+               FontSize="14"
+               TextColor="#333333"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+
+            <!-- Basic Grid -->
+            <Label Text="Basic Grid"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#4CAF50"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#E8F5E9">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Row 0, Col 0" Grid.Row="0" Grid.Column="0" BackgroundColor="#A5D6A7" Padding="10" />
+                <Label Text="Row 0, Col 1" Grid.Row="0" Grid.Column="1" BackgroundColor="#81C784" Padding="10" />
+                <Label Text="Row 1, Col 0" Grid.Row="1" Grid.Column="0" BackgroundColor="#66BB6A" Padding="10" />
+                <Label Text="Row 1, Col 1" Grid.Row="1" Grid.Column="1" BackgroundColor="#4CAF50" Padding="10" />
+            </Grid>
+
+            <!-- Grid with Spanning -->
+            <Label Text="Grid with Spanning"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#FF9800"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#FFF3E0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Row 0, Col 0 (Spanning 2 Columns)" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#FFCC80" Padding="10" />
+                <Label Text="Row 1, Col 0" Grid.Row="1" Grid.Column="0" BackgroundColor="#FFB74D" Padding="10" />
+                <Label Text="Row 1, Col 1" Grid.Row="1" Grid.Column="1" BackgroundColor="#FFA726" Padding="10" />
+            </Grid>
+
+            <!-- Nested Grid -->
+            <Label Text="Nested Grid"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#E1F5FE"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#E1F5FE">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Outer Grid - Row 0, Col 0" Grid.Row="0" Grid.Column="0" BackgroundColor="#81D4FA" Padding="10" />
+                <Label Text="Outer Grid - Row 0, Col 1" Grid.Row="0" Grid.Column="1" BackgroundColor="#4FC3F7" Padding="10" />
+
+                <!-- Inner Grid -->
+                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#B3E5FC">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Inner Grid - Row 0, Col 0" Grid.Row="0" Grid.Column="0" BackgroundColor="#81D4FA" Padding="10" />
+                    <Label Text="Inner Grid - Row 0, Col 1" Grid.Row="0" Grid.Column="1" BackgroundColor="#4FC3F7" Padding="10" />
+                    <Label Text="Inner Grid - Row 1, Col 0" Grid.Row="1" Grid.Column="0" BackgroundColor="#29B6F6" Padding="10" />
+                    <Label Text="Inner Grid - Row 1, Col 1" Grid.Row="1" Grid.Column="1" BackgroundColor="#03A9F4" Padding="10" />
+                </Grid>
+            </Grid>
+
+            <!-- Grid with Alignment -->
+            <Label Text="Grid with Alignment"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#F3E5F5"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#F3E5F5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Row 0, Col 0 (Center Aligned)" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#CE93D8" Padding="10" />
+                <Label Text="Row 0, Col 1 (End Aligned)" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="#BA68C8" Padding="10" />
+                <Label Text="Row 1, Col 0 (Start Aligned)" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="#AB47BC" Padding="10" />
+                <Label Text="Row 1, Col 1 (Fill Aligned)" Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#9C27B0" Padding="10" />
+            </Grid>
+
+            <!-- Grid with Proportional Sizing -->
+            <Label Text="Grid with Proportional Sizing"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#FFEB3B"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#FFF9C4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Row 0, Col 0" Grid.Row="0" Grid.Column="0" BackgroundColor="#FFF176" Padding="10" />
+                <Label Text="Row 0, Col 1" Grid.Row="0" Grid.Column="1" BackgroundColor="#FFEE58" Padding="10" />
+                <Label Text="Row 1, Col 0" Grid.Row="1" Grid.Column="0" BackgroundColor="#FFEB3B" Padding="10" />
+                <Label Text="Row 1, Col 1" Grid.Row="1" Grid.Column="1" BackgroundColor="#FDD835" Padding="10" />
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

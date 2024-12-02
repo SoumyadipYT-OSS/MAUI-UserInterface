@@ -4,11 +4,17 @@
              x:Class="_04_AbsoluteLayout.MainPage">
 
     <AbsoluteLayout Margin="50, 200">
+        <Image Source="graphpaper.png"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+               Aspect="AspectFill"
+            />
+
         <!-- AbsoluteLayout.LayoutBounds="x, y, width, height" -->
         <!-- X-Axis -->
         <BoxView Color="Black"
                  AbsoluteLayout.LayoutFlags="None"
-                 AbsoluteLayout.LayoutBounds="0, 300, 300, 3"
+                 AbsoluteLayout.LayoutBounds="0, 308, 300, 2"
                 />
         <Label Text="X-Axis" SemanticProperties.Description="Xaxis"
                TextColor="Black"
@@ -19,7 +25,7 @@
         <!-- Y-Axis -->
         <BoxView Color="Black" SemanticProperties.Description="Yaxis"
                  AbsoluteLayout.LayoutFlags="None"
-                 AbsoluteLayout.LayoutBounds="0, 0, 3, 300"
+                 AbsoluteLayout.LayoutBounds="0, 0, 2, 308"
                  />
 
         <Label Text="Y-Axis"
@@ -42,7 +48,3 @@
     </AbsoluteLayout>
 
 </ContentPage>
-
-    
-    
-    

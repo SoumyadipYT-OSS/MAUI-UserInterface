@@ -9,18 +9,19 @@
         <BoxView Color="Black"
                  AbsoluteLayout.LayoutFlags="None"
                  AbsoluteLayout.LayoutBounds="0, 300, 300, 3"
-                 Rotation="0" />
-        <Label Text="X-Axis"
+                />
+        <Label Text="X-Axis" SemanticProperties.Description="Xaxis"
                TextColor="Black"
                FontSize="14"
                AbsoluteLayout.LayoutFlags="None"
                AbsoluteLayout.LayoutBounds="150, 310, AutoSize, AutoSize" />
 
         <!-- Y-Axis -->
-        <BoxView Color="Black"
+        <BoxView Color="Black" SemanticProperties.Description="Yaxis"
                  AbsoluteLayout.LayoutFlags="None"
-                 AbsoluteLayout.LayoutBounds="-149, 150, 300, 3"
-                 Rotation="90" />
+                 AbsoluteLayout.LayoutBounds="0, 0, 3, 300"
+                 />
+
         <Label Text="Y-Axis"
                TextColor="Black"
                FontSize="14"
@@ -41,3 +42,7 @@
     </AbsoluteLayout>
 
 </ContentPage>
+
+    
+    
+    

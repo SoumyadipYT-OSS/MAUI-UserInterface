@@ -3,48 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_04_AbsoluteLayout.MainPage">
 
-    <AbsoluteLayout Margin="50, 200">
+    <Grid Margin="10" HeightRequest="320" WidthRequest="320">
+        <!-- Graph paper background -->
         <Image Source="graphpaper.png"
-               AbsoluteLayout.LayoutFlags="All"
-               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                Aspect="AspectFill"
-            />
+               Grid.RowSpan="2"
+               Grid.ColumnSpan="2" />
 
-        <!-- AbsoluteLayout.LayoutBounds="x, y, width, height" -->
-        <!-- X-Axis -->
-        <BoxView Color="Black"
-                 AbsoluteLayout.LayoutFlags="None"
-                 AbsoluteLayout.LayoutBounds="0, 308, 300, 2"
-                />
-        <Label Text="X-Axis" SemanticProperties.Description="Xaxis"
-               TextColor="Black"
-               FontSize="14"
-               AbsoluteLayout.LayoutFlags="None"
-               AbsoluteLayout.LayoutBounds="150, 310, AutoSize, AutoSize" />
+        <!-- Chart Area -->
+        <AbsoluteLayout Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <!-- Graph chart -->
+            <Image Source="graphchart.png"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                   Aspect="AspectFit" />
 
-        <!-- Y-Axis -->
-        <BoxView Color="Black" SemanticProperties.Description="Yaxis"
-                 AbsoluteLayout.LayoutFlags="None"
-                 AbsoluteLayout.LayoutBounds="0, 0, 2, 308"
-                 />
+            <!-- X-Axis -->
+            <BoxView Color="Black"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0, 1, 1, 0.01" />
+            <Label Text="X-Axis" SemanticProperties.Description="Xaxis"
+                   TextColor="Black"
+                   FontSize="14"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 1.08, AutoSize, AutoSize" />
 
-        <Label Text="Y-Axis"
-               TextColor="Black"
-               FontSize="14"
-               AbsoluteLayout.LayoutFlags="None"
-               AbsoluteLayout.LayoutBounds="-46, 150, AutoSize, AutoSize" />
+            <!-- Y-Axis -->
+            <BoxView Color="Black" SemanticProperties.Description="Yaxis"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0, 0, 0.01, 1" />
+            <Label Text="Y-Axis"
+                   TextColor="Black"
+                   FontSize="14"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="-0.15, 0.5, AutoSize, AutoSize" />
 
-        <!-- Shape (BoxView) -->
-        <BoxView Color="DarkViolet"
-                 AbsoluteLayout.LayoutFlags="None"
-                 AbsoluteLayout.LayoutBounds="150, 100, 50, 200" />
 
-        <!-- Label for Height -->
-        <Label Text="(Height)"
-               TextColor="DarkViolet"
-               FontSize="14"
-               AbsoluteLayout.LayoutFlags="None"
-               AbsoluteLayout.LayoutBounds="210, 200, AutoSize, AutoSize" />
-    </AbsoluteLayout>
+            <!-- Shape (BoxView) -->
+            <BoxView BackgroundColor="#45556050"
+                     Color="Transparent"
+                     AbsoluteLayout.LayoutFlags="PositionProportional, All"
+                     AbsoluteLayout.LayoutBounds="0.33, 1, 0.1, 0.4" />
+
+            <BoxView BackgroundColor="#50008080"
+                     Color="Transparent"
+                     AbsoluteLayout.LayoutFlags="PositionProportional, All"
+                     AbsoluteLayout.LayoutBounds="0.5, 1, 0.1, 0.65" />
+
+
+            <!-- Label for Height -->
+            <Label Text="(Value)"
+                   TextColor="DarkViolet"
+                   FontSize="20"
+                   AbsoluteLayout.LayoutFlags="YProportional"
+                   AbsoluteLayout.LayoutBounds="5, 0" />
+            <Label Text="(Time)"
+                   TextColor="DarkCyan"
+                   FontSize="20"
+                   AbsoluteLayout.LayoutFlags="XProportional"
+                   AbsoluteLayout.LayoutBounds="1, 320" />
+        </AbsoluteLayout>
+    </Grid>
 
 </ContentPage>

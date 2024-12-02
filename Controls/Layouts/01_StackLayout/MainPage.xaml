@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_01_StackLayout.MainPage"
+             BackgroundColor="#f0f0f0">
+
+    <StackLayout Padding="20" Spacing="10">
+        <!-- Header Label -->
+        <Label Text="StackLayout Example"
+               FontSize="24"
+               TextColor="White"
+               BackgroundColor="#2196F3"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="10" />
+
+        <!-- Description for StackLayout -->
+        <Label Text="By default StackLayout arranges its children vertically, but you can make it horizontally or vertically using properties."
+               FontSize="14"
+               TextColor="#333333"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+
+        <!-- HorizontalStackLayout Section -->
+        <Label Text="HorizontalStackLayout"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#4CAF50"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+        <Label Text="HorizontalStackLayout arranges its children in a horizontal line."
+               FontSize="14"
+               TextColor="#333333"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+        <HorizontalStackLayout BackgroundColor="#E8F5E9" Padding="10" Spacing="10">
+            <Label Text="Item 1" BackgroundColor="#A5D6A7" Padding="10" />
+            <Label Text="Item 2" BackgroundColor="#81C784" Padding="10" />
+            <Label Text="Item 3" BackgroundColor="#66BB6A" Padding="10" />
+        </HorizontalStackLayout>
+
+        <!-- VerticalStackLayout Section -->
+        <Label Text="VerticalStackLayout"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="#FF9800"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+        <Label Text="VerticalStackLayout arranges its children in a vertical line."
+               FontSize="14"
+               TextColor="#333333"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Padding="5" />
+        <VerticalStackLayout BackgroundColor="#FFF3E0" Padding="10" Spacing="10">
+            <Label Text="Item 1" BackgroundColor="#FFCC80" Padding="10" />
+            <Label Text="Item 2" BackgroundColor="#FFB74D" Padding="10" />
+            <Label Text="Item 3" BackgroundColor="#FFA726" Padding="10" />
+        </VerticalStackLayout>
+    </StackLayout>
+</ContentPage>

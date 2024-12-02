@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_03_FlexLayout.MainPage"
+             BackgroundColor="#f0f0f0">
+
+
+    <FlexLayout>
+        <FlexLayout JustifyContent="Center">   <!-- Here you can pass {Center, Start, End, SpaceAround, SpaceBetween, SpaceEvenly}  -->
+            <Label Text="1st Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="HotPink" />
+            <Label Text="2nd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="LightSkyBlue" />
+            <Label Text="3rd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="DarkGoldenrod" />
+            <Label Text="4th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Coral" />
+            <Label Text="5th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="MediumVioletRed" />
+            <Label Text="6th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Orange" />
+        </FlexLayout>
+        
+        
+        <FlexLayout Direction="Column">        <!-- Here you can pass {Column, ColumnReverse, Row, Reverse} -->
+            <Label Text="1st Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="HotPink" />
+            <Label Text="2nd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="LightSkyBlue" />
+            <Label Text="3rd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="DarkGoldenrod" />
+            <Label Text="4th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Coral" />
+            <Label Text="5th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="MediumVioletRed" />
+            <Label Text="6th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Orange" />
+        </FlexLayout>
+        
+        
+
+        <FlexLayout AlignItems="Center">    <!-- Here you can pass {Center, Start, End, Stretch} -->
+            <Label Text="1st Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="HotPink" />
+            <Label Text="2nd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="LightSkyBlue" />
+            <Label Text="3rd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="DarkGoldenrod" />
+            <Label Text="4th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Coral" />
+            <Label Text="5th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="MediumVioletRed" />
+            <Label Text="6th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Orange" />
+        </FlexLayout>
+
+        
+        
+        <FlexLayout Wrap="Wrap">            <!-- Here you can pass {NoWrap, Center, Wrap} -->
+            <Label Text="1st Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="HotPink" />
+            <Label Text="2nd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="LightSkyBlue" />
+            <Label Text="3rd Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="DarkGoldenrod" />
+            <Label Text="4th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Coral" />
+            <Label Text="5th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="MediumVioletRed" />
+            <Label Text="6th Label" FontSize="20" VerticalTextAlignment="Center" BackgroundColor="Orange" />
+        </FlexLayout>
+
+    </FlexLayout>
+
+</ContentPage>

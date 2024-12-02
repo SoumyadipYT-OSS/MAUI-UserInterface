@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_04_AbsoluteLayout.MainPage">
+
+    <AbsoluteLayout Margin="50, 200">
+        <!-- AbsoluteLayout.LayoutBounds="x, y, width, height" -->
+        <!-- X-Axis -->
+        <BoxView Color="Black"
+                 AbsoluteLayout.LayoutFlags="None"
+                 AbsoluteLayout.LayoutBounds="0, 300, 300, 3"
+                 Rotation="0" />
+        <Label Text="X-Axis"
+               TextColor="Black"
+               FontSize="14"
+               AbsoluteLayout.LayoutFlags="None"
+               AbsoluteLayout.LayoutBounds="150, 310, AutoSize, AutoSize" />
+
+        <!-- Y-Axis -->
+        <BoxView Color="Black"
+                 AbsoluteLayout.LayoutFlags="None"
+                 AbsoluteLayout.LayoutBounds="-149, 150, 300, 3"
+                 Rotation="90" />
+        <Label Text="Y-Axis"
+               TextColor="Black"
+               FontSize="14"
+               AbsoluteLayout.LayoutFlags="None"
+               AbsoluteLayout.LayoutBounds="-46, 150, AutoSize, AutoSize" />
+
+        <!-- Shape (BoxView) -->
+        <BoxView Color="DarkViolet"
+                 AbsoluteLayout.LayoutFlags="None"
+                 AbsoluteLayout.LayoutBounds="150, 100, 50, 200" />
+
+        <!-- Label for Height -->
+        <Label Text="(Height)"
+               TextColor="DarkViolet"
+               FontSize="14"
+               AbsoluteLayout.LayoutFlags="None"
+               AbsoluteLayout.LayoutBounds="210, 200, AutoSize, AutoSize" />
+    </AbsoluteLayout>
+
+</ContentPage>

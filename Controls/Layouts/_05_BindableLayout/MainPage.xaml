@@ -23,17 +23,16 @@
                 </StackLayout>
             </StackLayout>
 
-            
-            
+
+
             <!-- Example 2 (Student Details) -->
             <Label Text="Example 2 (Student Details)" FontSize="24" FontAttributes="Bold" Margin="10,20,10,10" />
             <ScrollView Orientation="Both" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                 <mypackage:CustomDataGrid ItemsSource="{Binding Students}" HeaderNames="{Binding Students}" FontSize="14" />
             </ScrollView>
 
-            
+
         </StackLayout>
 
     </ScrollView>
-
 </ContentPage>

@@ -4,8 +4,8 @@
              x:Class="_05_BindableLayout.MainPage">
 
     <ScrollView>
-        <!-- I have used Flex Layout, for controlling complex layout and control the binding smoothly in this page -->
-        <FlexLayout>
+        <!-- I have used Stack Layout (by default is shows vertically), for controlling complex layout and control the binding smoothly in this page -->
+        <StackLayout>
             <!-- Example 1 (Basic) -->
             <Label Text="Example 1 (Basic)" />
             <StackLayout>
@@ -23,7 +23,11 @@
             
             
             
-        </FlexLayout>
+            
+            <!-- Example 2 -->
+            
+            
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>

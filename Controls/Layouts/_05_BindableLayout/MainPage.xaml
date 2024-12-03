@@ -6,8 +6,7 @@
              x:Class="_05_BindableLayout.MainPage"
              x:DataType="local:MainPageViewModel">
 
-    <ScrollView>
-        <!-- I have used Stack Layout (by default is shows vertically), for controlling complex layout and control the binding smoothly in this page -->
+    <ScrollView Orientation="Both">
         <StackLayout>
             <!-- Example 1 (Basic) -->
             <Label Text="Example 1 (Basic)" />
@@ -23,15 +22,18 @@
                     </BindableLayout.ItemTemplate>
                 </StackLayout>
             </StackLayout>
-            
-            
-            
-            
-            <!-- Example 2 -->
-            <Label Text="Example 2 (Student Details)" />
-            <mypackage:CustomDataGrid ItemsSource="{Binding Students}" />
 
+            
+            
+            <!-- Example 2 (Student Details) -->
+            <Label Text="Example 2 (Student Details)" FontSize="24" FontAttributes="Bold" Margin="10,20,10,10" />
+            <ScrollView Orientation="Both" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <mypackage:CustomDataGrid ItemsSource="{Binding Students}" HeaderNames="{Binding Students}" FontSize="14" />
+            </ScrollView>
+
+            
         </StackLayout>
+
     </ScrollView>
 
 </ContentPage>

@@ -1,0 +1,119 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_04_BoxView.MainPage">
+
+    <ScrollView Padding="30">
+        <StackLayout Spacing="40">
+            <!-- Basic BoxView -->
+            <Label Text="Basic BoxView" HorizontalOptions="Center" />
+            <BoxView Color="Red"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with CornerRadius -->
+            <Label Text="BoxView with CornerRadius" HorizontalOptions="Center" />
+            <BoxView Color="Blue"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     CornerRadius="20"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with BackgroundColor -->
+            <Label Text="BoxView with BackgroundColor" HorizontalOptions="Center" />
+            <BoxView BackgroundColor="Green"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Opacity -->
+            <Label Text="BoxView with Opacity" HorizontalOptions="Center" />
+            <BoxView Color="Yellow"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     Opacity="0.5"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Margin -->
+            <Label Text="BoxView with Margin" HorizontalOptions="Center" />
+            <BoxView Color="Purple"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     Margin="10"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Rotation -->
+            <Label Text="BoxView with Rotation" HorizontalOptions="Center" />
+            <BoxView Color="Orange"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     Rotation="45"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Translation -->
+            <Label Text="BoxView with Translation" HorizontalOptions="Center" />
+            <BoxView Color="Pink"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     TranslationX="20"
+                     TranslationY="20"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Scale -->
+            <Label Text="BoxView with Scale" HorizontalOptions="Center" />
+            <BoxView Color="Brown"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     Scale="1.5"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Shadow -->
+            <Label Text="BoxView with Shadow" HorizontalOptions="Center" />
+            <BoxView Color="Gray"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- BoxView with Gradient Background -->
+            <Label Text="BoxView with Gradient Background" HorizontalOptions="Center" />
+            <BoxView WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Red" Offset="0.0" />
+                        <GradientStop Color="Yellow" Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+
+            <!-- Advanced BoxView with Rotation Animation -->
+            <Label Text="Advanced BoxView with Rotation Animation" HorizontalOptions="Center" />
+            <BoxView x:Name="animatedBoxView"
+                     Color="Teal"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+            <!-- Advanced BoxView with Color Animation -->
+            <Label Text="Advanced BoxView with Color Animation" HorizontalOptions="Center" />
+            <BoxView x:Name="colorAnimatedBoxView"
+                     Color="Purple"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

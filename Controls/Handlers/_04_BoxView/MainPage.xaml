@@ -68,21 +68,33 @@
 
             <!-- BoxView with Scale -->
             <Label Text="BoxView with Scale" HorizontalOptions="Center" />
-            <BoxView Color="Brown"
+            <BoxView Color="LightGoldenrodYellow"
                      WidthRequest="100"
                      HeightRequest="100"
-                     Scale="1.5"
                      HorizontalOptions="Center"
-                     VerticalOptions="Center" />
+                     VerticalOptions="Center" >
+                <BoxView.Shadow>
+                    <Shadow Radius="10"
+                            Offset="5,5"
+                            Brush="RosyBrown" />
+                </BoxView.Shadow>
+            </BoxView>
 
             <!-- BoxView with Shadow -->
             <Label Text="BoxView with Shadow" HorizontalOptions="Center" />
-            <BoxView Color="Gray"
+            <BoxView Color="GreenYellow"
                      WidthRequest="100"
                      HeightRequest="100"
                      HorizontalOptions="Center"
-                     VerticalOptions="Center" />
+                     VerticalOptions="Center" >
+                <BoxView.Shadow>
+                    <Shadow Radius="10"
+                            Offset="5,5"
+                            Brush="DimGray" />
+                </BoxView.Shadow>
+            </BoxView>
 
+            
             <!-- BoxView with Gradient Background -->
             <Label Text="BoxView with Gradient Background" HorizontalOptions="Center" />
             <BoxView WidthRequest="100"

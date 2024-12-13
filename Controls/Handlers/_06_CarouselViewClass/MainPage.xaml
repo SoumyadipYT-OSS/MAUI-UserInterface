@@ -6,8 +6,8 @@
 
     <ScrollView Padding="30">
         <StackLayout Spacing="40">
-            <!-- CarouselView with Modern Design Indicators -->
-            <Label Text="CarouselView with Modern Design Indicators" HorizontalOptions="Center" />
+            <!-- CarouselView with Circle Design Indicators -->
+            <Label Text="CarouselView with Circle Design Indicators" HorizontalOptions="Center" />
             <StackLayout>
                 <CarouselView x:Name="modernCarouselView" ItemsSource="{Binding Images}"
                               IndicatorView="{x:Reference modernIndicatorView}"
@@ -23,6 +23,26 @@
                                SelectedIndicatorColor="Black"
                                IndicatorSize="10"
                                IndicatorsShape="Circle"
+                               HorizontalOptions="Center" />
+            </StackLayout>
+
+            <!-- New CarouselView with Square Indicator Design -->
+            <Label Text="CarouselView with Square Indicator Design" HorizontalOptions="Center" />
+            <StackLayout>
+                <CarouselView x:Name="customCarouselView" ItemsSource="{Binding Images}"
+                              IndicatorView="{x:Reference customIndicatorView}"
+                              PositionChanged="OnCustomPositionChanged">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <Image Source="{Binding .}" Aspect="AspectFill" />
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="customIndicatorView"
+                               IndicatorColor="LightGray"
+                               SelectedIndicatorColor="DarkBlue"
+                               IndicatorSize="12"
+                               IndicatorsShape="Square"
                                HorizontalOptions="Center" />
             </StackLayout>
         </StackLayout>

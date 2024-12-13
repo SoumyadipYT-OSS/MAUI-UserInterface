@@ -1,0 +1,130 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_05_Button.MainPage">
+
+    <ScrollView Padding="30">
+        <StackLayout Spacing="40">
+            <!-- Basic Button -->
+            <Label Text="Basic Button" HorizontalOptions="Center" />
+            <Button Text="Click Me"
+                    BackgroundColor="LightBlue"
+                    TextColor="White"
+                    FontSize="20"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked" />
+
+            <!-- Button with Image -->
+            <Label Text="Button with Image" HorizontalOptions="Center" />
+            <Button Text="Click Me"
+                    BackgroundColor="LightBlue"
+                    TextColor="White"
+                    FontSize="20"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked">
+                <Button.ImageSource>
+                    <FileImageSource File="dotnet_bot.png" />
+                </Button.ImageSource>
+            </Button>
+
+            <!-- Button with Border -->
+            <Label Text="Button with Border" HorizontalOptions="Center" />
+            <Button Text="Click Me"
+                    BackgroundColor="LightBlue"
+                    TextColor="White"
+                    FontSize="20"
+                    BorderColor="DarkBlue"
+                    BorderWidth="2"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked" />
+
+            <!-- Button with Padding -->
+            <Label Text="Button with Padding" HorizontalOptions="Center" />
+            <Button Text="Click Me"
+                    BackgroundColor="LightBlue"
+                    TextColor="White"
+                    FontSize="20"
+                    CornerRadius="10"
+                    Padding="20"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked" />
+
+            <!-- Button with Font Attributes -->
+            <Label Text="Button with Font Attributes" HorizontalOptions="Center" />
+            <Button Text="Click Me"
+                    x:Name="colorChangingButton"
+                    BackgroundColor="LightBlue"
+                    TextColor="White"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonFontAtrribute" />
+
+            <!-- Advanced Button with Gradient Background -->
+            <Label Text="Advanced Button with Gradient Background" HorizontalOptions="Center" />
+            <Button Text="Click Me"
+                    TextColor="White"
+                    FontSize="20"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Red" Offset="0.0" />
+                        <GradientStop Color="Yellow" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <!-- Advanced Button with Animation -->
+            <Label Text="Advanced Button with Animation" HorizontalOptions="Center" />
+            <Button x:Name="animatedButton"
+                    Text="Click Me"
+                    BackgroundColor="LightBlue"
+                    TextColor="White"
+                    FontSize="20"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked" />
+
+            <!-- Advanced Button with Shadow -->
+            <Label Text="Advanced Button with Custom Shadow" HorizontalOptions="Center" />
+            <Border Stroke="DarkBlue" StrokeThickness="2">
+                <Grid>
+                    <Button Text="Click Me" 
+                            BackgroundColor="LightCoral" 
+                            TextColor="White" 
+                            FontSize="20" 
+                            CornerRadius="10" 
+                            Padding="10" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center" 
+                            Clicked="OnButtonClicked" >
+                        <Button.Shadow>
+                            <Shadow Brush="BlueViolet"
+                                    Offset="20, 20"
+                                    Radius="40"
+                                    Opacity="0.8" />
+                        </Button.Shadow>
+                    </Button>
+                </Grid>
+            </Border>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

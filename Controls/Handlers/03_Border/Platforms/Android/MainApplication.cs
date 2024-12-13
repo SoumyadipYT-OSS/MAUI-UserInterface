@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace _02_BlazorWebViewHandler
+namespace _03_Border
 {
     [Application]
     public class MainApplication : MauiApplication

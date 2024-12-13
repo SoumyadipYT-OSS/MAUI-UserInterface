@@ -1,4 +1,4 @@
-﻿namespace _02_BlazorWebViewHandler
+﻿namespace _03_Border
 {
     public partial class App : Application
     {
@@ -9,7 +9,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            return new Window(new MainPage());
         }
     }
 }

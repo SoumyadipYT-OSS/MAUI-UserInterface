@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace _02_BlazorWebViewHandler
+namespace _03_Border
 {
     public static class MauiProgram
     {

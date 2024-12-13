@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace _02_BlazorWebViewHandler
+namespace _03_Border
 {
     public class Program
     {

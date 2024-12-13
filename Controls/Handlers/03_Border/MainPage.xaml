@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_03_Border.MainPage">
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <!-- Border with default properties -->
+            <Border Stroke="Black" StrokeThickness="2" Padding="10" BackgroundColor="LightGray">
+                <BoxView Color="Blue" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom StrokeDashArray -->
+            <Border Stroke="Red" StrokeThickness="2" Padding="10" BackgroundColor="LightGray" StrokeDashArray="4,2">
+                <BoxView Color="Green" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom StrokeDashOffset -->
+            <Border Stroke="Purple" StrokeThickness="2" Padding="10" BackgroundColor="LightGray" StrokeDashArray="4,2" StrokeDashOffset="2">
+                <BoxView Color="Yellow" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom StrokeLineCap -->
+            <Border Stroke="Orange" StrokeThickness="2" Padding="10" BackgroundColor="LightGray" StrokeLineCap="Round">
+                <BoxView Color="Pink" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom StrokeLineJoin -->
+            <Border Stroke="Brown" StrokeThickness="2" Padding="10" BackgroundColor="LightGray" StrokeLineJoin="Bevel">
+                <BoxView Color="Cyan" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom StrokeMiterLimit -->
+            <Border Stroke="Black" StrokeThickness="2" Padding="10" BackgroundColor="LightGray" StrokeLineJoin="Miter" StrokeMiterLimit="2">
+                <BoxView Color="Magenta" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom StrokeShape -->
+            <Border Stroke="Blue" StrokeThickness="2" Padding="10" BackgroundColor="LightGray">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <BoxView Color="Orange" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom Padding -->
+            <Border Stroke="Green" StrokeThickness="2" Padding="20" BackgroundColor="LightGray">
+                <BoxView Color="Purple" HeightRequest="50" WidthRequest="50" />
+            </Border>
+
+            <!-- Border with custom BackgroundColor -->
+            <Border Stroke="Red" StrokeThickness="2" Padding="10" BackgroundColor="Yellow">
+                <BoxView Color="Blue" HeightRequest="50" WidthRequest="50" />
+            </Border>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

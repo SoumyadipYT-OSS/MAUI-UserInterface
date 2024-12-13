@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace _02_BlazorWebViewHandler
+namespace _03_Border
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

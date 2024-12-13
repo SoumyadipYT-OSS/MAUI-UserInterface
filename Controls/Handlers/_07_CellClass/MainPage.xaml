@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_07_CellClass.MainPage">
+
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="EntryCell Example">
+                <EntryCell Label="Name:" Placeholder="Enter your name" />
+                <EntryCell Label="Email:" Placeholder="Enter your email" Keyboard="Email" />
+            </TableSection>
+
+            <TableSection Title="SwitchCell Example">
+                <SwitchCell Text="Enable Notifications" On="{Binding NotificationsEnabled}" />
+            </TableSection>
+
+            <TableSection Title="TextCell Example">
+                <TextCell Text="TextCell Example" Detail="This is a detail text" />
+            </TableSection>
+
+            <TableSection Title="ImageCell Example">
+                <ImageCell Text="ImageCell Example" Detail="This is a detail text" ImageSource="https://via.placeholder.com/150" />
+            </TableSection>
+
+            <TableSection Title="ViewCell Example">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="Custom View:" VerticalOptions="Center" />
+                        <Slider Minimum="0" Maximum="100" Value="{Binding SliderValue}" VerticalOptions="Center" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_08_CheckBoxClass"
+             x:Class="_08_CheckBoxClass.MainPage"
+             x:DataType="local:MainPage">
+
+    <StackLayout Padding="50">
+        <Label Text="CheckBox Example" FontSize="24" HorizontalOptions="Center" />
+        <CheckBox IsChecked="{Binding IsChecked}" />
+        <Label Text="{Binding CheckBoxStatus}" FontSize="18" HorizontalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>

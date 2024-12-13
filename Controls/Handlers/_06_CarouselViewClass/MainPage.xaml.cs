@@ -12,13 +12,13 @@ namespace _06_CarouselViewClass {
 
         public MainPage() {
             InitializeComponent();
-            Images = new ObservableCollection<string> {
+            Images = [
                 "Resources/Images/avocado.svg",
                 "Resources/Images/grape.svg",
                 "Resources/Images/kiwi.svg",
                 "Resources/Images/lemon.svg",
                 "Resources/Images/waterlemon.svg"
-            };
+            ];
             BindingContext = this;
 
             // Initialize and start the timer for automatic scrolling
@@ -47,15 +47,13 @@ namespace _06_CarouselViewClass {
             }
         }
 
-        private void OnPositionChanged(object sender, PositionChangedEventArgs e) {
+        private void OnPositionChanged(object sender, PositionChangedEventArgs e) =>
             // Update the IndicatorView when the position changes
             modernIndicatorView.SelectedIndicatorColor = Colors.Black;
-        }
 
-        private void OnCustomPositionChanged(object sender, PositionChangedEventArgs e) {
+        private void OnCustomPositionChanged(object sender, PositionChangedEventArgs e) => 
             // Update the custom IndicatorView when the position changes
             customIndicatorView.SelectedIndicatorColor = Colors.DarkBlue;
-        }
 
         protected override void OnDisappearing() {
             base.OnDisappearing();

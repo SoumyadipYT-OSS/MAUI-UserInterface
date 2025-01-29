@@ -9,7 +9,7 @@
     <ScrollView Orientation="Both">
         <StackLayout>
             <!-- Example 1 (Basic) -->
-            <Label Text="Example 1 (Basic)" />
+            <Label Text="Example 1 (Basic)" FontSize="18" Margin="0,30" />
             <StackLayout>
                 <!-- BindableLayout for a StackLayout -->
                 <StackLayout BindableLayout.ItemsSource="{Binding Items}">

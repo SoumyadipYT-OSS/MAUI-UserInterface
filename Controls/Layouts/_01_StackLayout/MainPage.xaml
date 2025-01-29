@@ -4,6 +4,7 @@
              x:Class="_01_StackLayout.MainPage"
              BackgroundColor="#f0f0f0">
 
+    
     <StackLayout Padding="20" Spacing="10">
         <!-- Header Label -->
         <Label Text="StackLayout Example"

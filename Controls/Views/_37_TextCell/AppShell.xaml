@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_37_TextCell.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_37_TextCell"
+    xmlns:ex="clr-namespace:_37_TextCell.Examples"
+    Shell.FlyoutBehavior="Flyout"
+    Title="_37_TextCell">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Basic Text Cell"
+        ContentTemplate="{DataTemplate ex:BasicTextCell}" />
+
+    <ShellContent
+        Title="Text Cell with Detail"
+        ContentTemplate="{DataTemplate ex:AdvancedTextCell}" />
+
+</Shell>

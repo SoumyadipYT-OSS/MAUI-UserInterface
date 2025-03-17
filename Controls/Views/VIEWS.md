@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/456aa58e-2045-4e0f-b22f-013f20343511
 # .NET MAUI Views
 
 .NET MAUI Views are the building blocks of user interfaces, providing a wide range of controls to create stunning cross-platform apps. From simple labels to advanced layouts, Views are versatile and powerful tools for UI development.
@@ -321,7 +319,7 @@ The Map control allows you to display and interact with maps in a .NET MAUI appl
 - **`IsScrollEnabled`:** A boolean value indicating whether the user can scroll or pan the map.
 
 **Output:**
-
+https://github.com/user-attachments/assets/456aa58e-2045-4e0f-b22f-013f20343511
 https://github.com/user-attachments/assets/659b36ab-f8f5-4131-b84b-38504dad2d38
 
 ------

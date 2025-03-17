@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_14_GraphicsView"
+             xmlns:graphics="clr-namespace:_14_GraphicsView.Graphics"
+             x:DataType="local:App"
+             x:Class="_14_GraphicsView.MainPage">
+
+
+    <ContentPage.Resources>
+        <graphics:GraphicsDrawable x:Key="circleDrawable" GraphicType="Circle" />
+        <graphics:GraphicsDrawable x:Key="rectangleDrawable" GraphicType="Rectangle" />
+        <graphics:GraphicsDrawable x:Key="lineDrawable" GraphicType="Line" />
+        <graphics:GraphicsDrawable x:Key="textDrawable" GraphicType="Text" />
+        <graphics:GraphicsDrawable x:Key="ellipseDrawable" GraphicType="Ellipse" />
+    </ContentPage.Resources>
+
+
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+
+            <!-- Blue Circle -->
+            <Label Text="Blue Circle" 
+                   FontSize="Large" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="circleGraphicsView" 
+                          HeightRequest="100" 
+                          WidthRequest="100" />
+
+            <!-- Red Rectangle -->
+            <Label Text="Red Rectangle" 
+                   FontSize="Large" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="rectangleGraphicsView" 
+                          HeightRequest="100" 
+                          WidthRequest="200" />
+
+            <!-- Green Line -->
+            <Label Text="Green Line" 
+                   FontSize="Large" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="lineGraphicsView" 
+                          HeightRequest="50" 
+                          WidthRequest="200" />
+
+            <!-- Text -->
+            <Label Text="Text: 'Hello, GraphicsView!'" 
+                   FontSize="Large" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="textGraphicsView" 
+                          HeightRequest="50" 
+                          WidthRequest="400" />
+
+            <!-- Yellow Ellipse -->
+            <Label Text="Yellow Ellipse" 
+                   FontSize="Large" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="ellipseGraphicsView" 
+                          HeightRequest="100" 
+                          WidthRequest="200" />
+
+            <!-- Custom Draw -->
+            <Label Text="Custom Drawing"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="customDrawView"
+                          HeightRequest="200"
+                          WidthRequest="300" />
+
+            <!-- Polygon Draw using PathF -->
+            <Label Text="Polygon Draw PathF"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="customPolygonView"
+                          HeightRequest="200"
+                          WidthRequest="300" />
+            
+            <!-- Gradient Background Shape -->
+            <Label Text="Gradient Background Shape"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="customGradientBackground"
+                          HeightRequest="300"
+                          WidthRequest="300" />
+            
+            <!-- Text with shadow -->
+            <Label Text="Text with shadow"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+            <GraphicsView x:Name="customTextWithShadow"
+                          HeightRequest="100"
+                          WidthRequest="100" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

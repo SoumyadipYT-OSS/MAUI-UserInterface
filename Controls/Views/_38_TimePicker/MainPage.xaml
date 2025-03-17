@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_38_TimePicker.MainPage"
+             Title="TimePicker Explanation">
+
+
+    <ContentPage.Resources>
+        <!-- Define styles for TimePicker and Labels -->
+        <Style x:Key="TimePickerStyle" TargetType="TimePicker">
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#4A90E2" />
+            <Setter Property="BackgroundColor" Value="#E8F4FD" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="Margin" Value="10,20" />
+        </Style>
+
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="DarkSlateBlue" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="10,20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <!-- Header Title -->
+            <Label Text="TimePicker Class Overview" 
+                   Style="{StaticResource HeaderLabelStyle}" />
+
+            <!-- Explanation -->
+            <Label Text="The TimePicker class in .NET MAUI allows users to select a time using a convenient UI. 
+It supports properties like Time (default selection), Format (display style), and events to handle time changes dynamically."
+                   Style="{StaticResource LabelStyle}" />
+
+            <!-- Divider -->
+            <BoxView HeightRequest="2" 
+                     BackgroundColor="#4A90E2" 
+                     HorizontalOptions="Fill" />
+
+            <!-- TimePicker with Style -->
+            <TimePicker x:Name="customTimePicker"
+                        Time="14:30"
+                        Format="HH:mm" 
+                        Style="{StaticResource TimePickerStyle}" />
+
+            <!-- Dynamic Time Display -->
+            <Label x:Name="timeLabel"
+                   Text="Selected Time: 14:30"
+                   Style="{StaticResource LabelStyle}" />
+
+            <!-- Button for Interaction -->
+            <Button Text="Confirm Time"
+                    FontSize="18"
+                    CornerRadius="10"
+                    BackgroundColor="#4A90E2"
+                    TextColor="White"
+                    HeightRequest="50"
+                    Clicked="OnConfirmTimeClicked"
+                    HorizontalOptions="Center" />
+
+            <!-- Additional Info -->
+            <StackLayout>
+                <Label Text="Usage Notes:" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       TextColor="#4A90E2" />
+
+                <Label Text="1. TimePicker supports different time formats such as 24-hour or 12-hour with AM/PM."
+                       Style="{StaticResource LabelStyle}" />
+                <Label Text="2. You can dynamically update labels or other UI elements as the time is changed."
+                       Style="{StaticResource LabelStyle}" />
+                <Label Text="3. Use styles to give the TimePicker a cohesive and modern design."
+                       Style="{StaticResource LabelStyle}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

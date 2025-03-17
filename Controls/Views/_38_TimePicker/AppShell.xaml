@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_38_TimePicker.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_38_TimePicker"
+    xmlns:ex="clr-namespace:_38_TimePicker.Examples"
+    Shell.FlyoutBehavior="Flyout"
+    Title="_38_TimePicker">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Basic TimePicker XAML"
+        ContentTemplate="{DataTemplate ex:BasicTimePicker}"
+        Route="BasicTimePicker" />
+
+    <ShellContent
+        Title="Basic TimePicker C#"
+        ContentTemplate="{DataTemplate ex:BasicTimePickerDemo}"
+        Route="BasicTimePickerDemo" />
+
+    <ShellContent
+        Title="Advanced TimePicker XAML"
+        ContentTemplate="{DataTemplate ex:AdvancedTimePicker}"
+        Route="AdvancedTimePicker" />
+
+    <ShellContent
+        Title="Advanced TimePicker C#"
+        ContentTemplate="{DataTemplate ex:AdvancedTimePickerDemo}"
+        Route="AdvancedTimePickerDemo" />
+
+</Shell>

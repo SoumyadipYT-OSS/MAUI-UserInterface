@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_38_TimePicker.Examples.AdvancedTimePicker"
+             Title="Advanced TimePicker">
+
+    <ContentPage.Resources>
+        <!-- Resource for Styling -->
+        <Style x:Key="TimePickerStyle" TargetType="TimePicker">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="BackgroundColor" Value="#f0f8ff" />
+            <Setter Property="TextColor" Value="#007ACC" />
+            <Setter Property="Margin" Value="10,20" />
+        </Style>
+
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BackgroundColor" Value="#007ACC" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="HeightRequest" Value="50" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- Title -->
+            <Label Text="Advanced TimePicker Design" 
+                   FontSize="24"
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <!-- TimePicker Control -->
+            <TimePicker x:Name="timePicker"
+                        Time="08:30"
+                        Format="hh:mm tt"
+                        Style="{StaticResource TimePickerStyle}" />
+
+            <!-- Label to Display Selected Time -->
+            <Label x:Name="selectedTimeLabel"
+                   Text="Selected Time: "
+                   FontSize="18"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <!-- Add Button for Custom Action -->
+            <Button Text="Confirm Time"
+                    Style="{StaticResource ButtonStyle}"
+                    Clicked="OnConfirmTimeClicked" />
+
+            <!-- Separator Line -->
+            <BoxView HeightRequest="2" 
+                     BackgroundColor="#007ACC" 
+                     HorizontalOptions="Fill" />
+
+            <!-- Additional Info -->
+            <StackLayout>
+                <Label Text="Tips:" FontSize="18" FontAttributes="Bold" TextColor="#007ACC" />
+                <Label Text="• Use the TimePicker above to select a time." />
+                <Label Text="• Press the Confirm button to submit the time." />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

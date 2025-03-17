@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+
+		<!-- API Key goes here -->
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_MAPS_API_KEY" />
+
+		<!-- Google Play Service version number-->
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		
+	</application>
+
+
+	<!-- Required to access the user's location -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+	<!-- Specify the WRITE_EXTERNAL_STORAGE -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_23_Path.MainPage">
+
+
+    <ScrollView>
+        <StackLayout>
+            <!-- Overview of the Path Class -->
+            <Label Text="Overview of the Path Class" FontSize="24" FontAttributes="Bold" />
+            <Label Text="The Path class in .NET MAUI derives from the Shape class and is used to draw intricate shapes and curves. It offers a flexible way to create a variety of shapes by defining their geometry using path markup syntax or geometry objects." 
+           FontSize="16" />
+
+            <!-- Key Properties -->
+            <Label Text="Key Properties" FontSize="20" FontAttributes="Bold" />
+
+            <!-- Data Property -->
+            <Label Text="Data:" FontSize="18" FontAttributes="Bold" />
+            <Label Text="Type: Geometry" FontSize="16" />
+            <Label Text="Description: Specifies the geometry to be drawn. It can be set using path markup syntax or geometry objects." FontSize="16" />
+            <Label Text="Example:" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 0, 100 L 100, 100 100, 50 Z" Stroke="Black" Aspect="None" />
+
+            <!-- Stroke Property -->
+            <Label Text="Stroke:" FontSize="18" FontAttributes="Bold" />
+            <Label Text="Type: Brush" FontSize="16" />
+            <Label Text="Description: Defines the color used to stroke the outline of the shape." FontSize="16" />
+            <Label Text="Example:" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 10, 100 L 100, 100 100, 50 Z" Stroke="Red" StrokeThickness="2" />
+
+            <!-- Example 5: Half Circle -->
+            <Label Text="Example 5: Half Circle" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 100, 50 A 50, 50 0 1, 1 100.01, 50 Z" Stroke="Violet" StrokeThickness="2" />
+
+            <!-- Example 6: Star -->
+            <Label Text="Example 6: Star" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,15 L 61,35 L 84,35 L 68,49 L 75,72 L 50,58 L 25,72 L 32,49 L 16,35 L 39,35 Z" Stroke="Gold" StrokeThickness="3" />
+
+            <!-- Example 7: Heart -->
+            <Label Text="Example 7: Heart" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,30 Q 50,15 75,30 Q 100,45 50,75 Q 0,45 25,30 Q 50,15 50,30 Z" Stroke="Red" StrokeThickness="2" />
+
+            <!-- Example 8: Hexagon -->
+            <Label Text="Example 8: Hexagon" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 30,10 L 70,10 L 90,50 L 70,90 L 30,90 L 10,50 Z" Stroke="Teal" StrokeThickness="4" />
+
+            <!-- Example 9: Diamond -->
+            <Label Text="Example 9: Diamond" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,10 L 90,50 L 50,90 L 10,50 Z" Stroke="Blue" StrokeThickness="2" />
+
+            <!-- Example 10: Arrow -->
+            <Label Text="Example 10: Arrow" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 10,50 L 50,50 L 50,30 L 90,50 L 50,70 L 50,50 L 10,50 Z" Stroke="Black" StrokeThickness="3" />
+
+            <!-- Example 11: Triangle -->
+            <Label Text="Example 11: Triangle" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 10,10 L 50,100 L 90,10 Z" Stroke="DarkCyan" StrokeThickness="2" />
+
+            <!-- Example 12: Pentagon -->
+            <Label Text="Example 12: Pentagon" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,10 L 90,40 L 70,90 L 30,90 L 10,40 Z" Stroke="Magenta" StrokeThickness="3" />
+
+            <!-- Example 13: Parallelogram -->
+            <Label Text="Example 13: Parallelogram" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 20,20 L 80,20 L 60,80 L 0,80 Z" Stroke="CornflowerBlue" StrokeThickness="4" />
+
+            <!-- Example 14: Crescent -->
+            <Label Text="Example 14: Crescent" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,15 A 30,30 0 1,1 50,85 A 20,20 0 1,0 50,15 Z" Stroke="DarkOrange" StrokeThickness="2" />
+
+            <!-- Example 15: Wave -->
+            <Label Text="Example 15: Wave" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 10,80 Q 25,10 40,80 T 70,80 T 100,80" Stroke="Crimson" StrokeThickness="3" />
+
+            <!-- Example 16: Cross -->
+            <Label Text="Example 16: Cross" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 30,10 L 70,10 L 70,30 L 90,30 L 90,70 L 70,70 L 70,90 L 30,90 L 30,70 L 10,70 L 10,30 L 30,30 Z" Stroke="SlateBlue" StrokeThickness="3" />
+
+            <!-- Example 17: Teardrop -->
+            <Label Text="Example 17: Teardrop" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,10 Q 100,50 50,90 Q 0,50 50,10 Z" Stroke="SeaGreen" StrokeThickness="2" />
+
+            <!-- Example 18: Spiral -->
+            <Label Text="Example 18: Spiral" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 50,50 m -25,0 a 25,25 0 1,1 50,0 a 20,20 0 1,0 -40,0 a 15,15 0 1,1 30,0 a 10,10 0 1,0 -20,0 a 5,5 0 1,1 10,0" Stroke="Firebrick" StrokeThickness="2" />
+
+            <!-- Example 19: Cloud -->
+            <Label Text="Example 19: Cloud" FontSize="16" FontAttributes="Italic" />
+            <Path Data="M 60,30 A 10,10 0 0,1 80,30 A 10,10 0 0,1 90,40 A 10,10 0 0,1 80,50 H 40 A 10,10 0 0,1 30,40 A 10,10 0 0,1 40,30 A 10,10 0 0,1 60,30 Z" Stroke="LightSkyBlue" StrokeThickness="2" />
+
+            <!-- Example 20: Infinity Symbol -->
+            <Path Data="M 50,40 C 35,15 15,15 40,50 C 65,85 85,85 60,50 C 35,15 15,15 50,40 Z" Stroke="DarkGoldenRod" StrokeThickness="2" />
+
+            <!-- Example 21: Ellipse -->
+            <Path Data="M 50,0 A 50,25 0 1,0 50,100 A 50,25 0 1,0 50,0 Z" Stroke="Indigo" StrokeThickness="2" />
+
+            <!-- Example 22: Trapezoid -->
+            <Path Data="M 20,20 L 80,20 L 70,80 L 30,80 Z" Stroke="Olive" StrokeThickness="3" />
+
+            <!-- Example 23: Kite -->
+            <Path Data="M 50,0 L 70,50 L 50,100 L 30,50 Z" Stroke="DarkRed" StrokeThickness="2" />
+
+            <!-- Example 24: Right Triangle -->
+            <Path Data="M 10,10 L 100,10 L 10,100 Z" Stroke="OrangeRed" StrokeThickness="3" />
+
+            <!-- Example 25: Octagon -->
+            <Path Data="M 30,10 L 70,10 L 90,30 L 90,70 L 70,90 L 30,90 L 10,70 L 10,30 Z" Stroke="DarkMagenta" StrokeThickness="4" />
+
+            <!-- Example 26: Arrowhead -->
+            <Path Data="M 50,0 L 100,50 L 70,50 L 70,100 L 30,100 L 30,50 L 0,50 Z" Stroke="DarkSlateGray" StrokeThickness="3" />
+
+            <!-- Example 27: Banner -->
+            <Path Data="M 10,10 L 90,10 L 70,50 L 90,90 L 10,90 L 30,50 Z" Stroke="CornflowerBlue" StrokeThickness="2" />
+
+            <!-- Example 28: Lightning Bolt -->
+            <Path Data="M 50,0 L 70,50 L 50,50 L 70,100 L 30,50 L 50,50 Z" Stroke="Gold" StrokeThickness="2" />
+
+            <!-- Example 29: Flower -->
+            <Path Data="M 50,25 A 25,25 0 1,1 75,50 A 25,25 0 1,1 50,75 A 25,25 0 1,1 25,50 A 25,25 0 1,1 50,25 Z" Stroke="MediumPurple" StrokeThickness="2" />
+
+            <!-- Example 30: Arrow Arc -->
+            <Path Data="M 50,50 A 50,50 0 0,1 100,100 L 90,90 M 50,50 A 50,50 0 0,0 0,0 L 10,10" Stroke="Crimson" StrokeThickness="2" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

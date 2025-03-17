@@ -319,8 +319,8 @@ The Map control allows you to display and interact with maps in a .NET MAUI appl
 - **`IsScrollEnabled`:** A boolean value indicating whether the user can scroll or pan the map.
 
 **Output:**
-https://github.com/user-attachments/assets/456aa58e-2045-4e0f-b22f-013f20343511
-https://github.com/user-attachments/assets/659b36ab-f8f5-4131-b84b-38504dad2d38
+
+https://github.com/user-attachments/assets/9de38e91-9c03-46b2-b1d5-f3434985bc7e
 
 ------
 

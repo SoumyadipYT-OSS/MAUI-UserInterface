@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_09_CollectionView.MainPage"
+             xmlns:local="clr-namespace:_09_CollectionView"
+             xmlns:m="clr-namespace:_09_CollectionView.Models"
+             xmlns:vm="clr-namespace:_09_CollectionView.ViewModels"
+             x:DataType="vm:BooksViewModel"
+             Title="Collection View Learning">
+
+
+    <ContentPage.BindingContext>
+        <vm:BooksViewModel />
+    </ContentPage.BindingContext>
+
+
+    <StackLayout>
+        <Label Text="Books CollectionView"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               Margin="20" />
+
+        <CollectionView ItemsSource="{Binding Books}" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="m:Book">
+                    <Border BackgroundColor="White" Padding="10" Margin="5" Stroke="LightGray" StrokeThickness="1">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Image Source="{Binding CoverImageUrl}" WidthRequest="100" HeightRequest="150" />
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="Medium" />
+                                <Label Text="{Binding Author}" FontSize="Small" TextColor="SlateGrey" />
+                                <Label Text="{Binding Genre}" FontSize="Small" TextColor="SlateGray" />
+                                <Label Text="{Binding Description}" FontSize="Small" />
+                                <Label Text="{Binding Price, StringFormat='Price: ₹{0:N2}'}" FontSize="Small" TextColor="Green" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

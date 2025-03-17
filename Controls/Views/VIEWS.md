@@ -124,6 +124,37 @@ https://github.com/user-attachments/assets/4b5ac89e-e79b-426d-98b0-0f4e21c9dfa7
 
 ------
 
+## CollectionView
+
+The CollectionView control is a flexible and efficient way to display a collection of data in a customizable layout. It is ideal for scenarios like lists, grids, or custom layouts in .NET MAUI applications.
+
+### Key Properties:
+- **`ItemsSource`:** Specifies the collection of items to display in the CollectionView.
+- **`ItemTemplate`:** Defines the template used to render each item in the collection.
+- **`Layout`:** Determines the layout for the CollectionView, such as a vertical list or a grid.
+- **`SelectionMode`:** Specifies how items can be selected, such as Single, Multiple, or None.
+
+**Output:**
+
+![_09_CollectionView](https://github.com/user-attachments/assets/f2c7bff4-dc3b-4b86-a93e-d3e1aca56a6d)
+
+------
+
+## ContentView
+
+The ContentView control is a container that provides a simple way to organize and display a single child element, making it useful for creating reusable components in .NET MAUI applications.
+
+### Key Properties:
+- **`Content`:** Specifies the single child element to display within the ContentView.
+- **`Padding`:** Defines the space between the ContentView's edges and its child element.
+- **`BackgroundColor`:** Sets the background color of the ContentView for styling purposes.
+
+**Output:**
+
+![_10_ContentView](https://github.com/user-attachments/assets/186396bb-47e0-41c9-a15b-89983364cd59)
+
+------
+
 ## DatePicker
 
 The DatePicker control allows users to select a date from an interactive calendar, making it a convenient option for date-related inputs in .NET MAUI apps.
@@ -150,6 +181,8 @@ The Editor control provides a multi-line text input field, ideal for scenarios w
 
 **Output:**
 
+![_12_Editor](https://github.com/user-attachments/assets/f2189c9a-f0f6-4717-958e-897f1ee56a2d)
+
 https://github.com/user-attachments/assets/5cbe754a-767f-4b91-bfe7-0fc2e2acca36
 
 ------
@@ -165,4 +198,110 @@ The Entry control provides a single-line text input field, commonly used for for
 
 **Output:**
 
+https://github.com/user-attachments/assets/fcff2d9e-1e18-494a-944e-80d137b57bfd
+
 ------
+
+## GraphicsView
+
+The GraphicsView control provides a canvas for rendering 2D graphics using .NET MAUI's drawing APIs. It is highly versatile and enables custom visualizations, animations, and designs.
+
+### Key Properties:
+- **`Drawable`:** Defines the object responsible for rendering custom graphics on the canvas.
+- **`HeightRequest` and `WidthRequest`:** Specify the desired height and width of the GraphicsView.
+- **`BackgroundColor`:** Sets the background color of the canvas.
+
+**Output:**
+
+https://github.com/user-attachments/assets/909c9b73-314a-40c8-adad-7b8999d5ac01
+
+------
+
+## HybridWebView
+
+The HybridWebView control is a specialized web view that enables communication between .NET MAUI applications and JavaScript running within the web content. It provides a way to build powerful web-integrated apps.
+
+### Key Properties:
+- **`Uri`:** Specifies the URL or local file path to load in the web view.
+- **`EnableJavaScript`:** A boolean value that determines whether JavaScript is enabled in the web view.
+- **`EvaluateJavaScriptAsync`:** Executes JavaScript code in the web content and returns the result asynchronously.
+
+------
+
+## ImageButton
+
+The ImageButton control combines an image with the functionality of a button, allowing users to perform actions when the image is tapped or clicked in a .NET MAUI app.
+
+### Key Properties:
+- **`Source`:** Specifies the image to display on the button.
+- **`Command`:** Binds a command to be executed when the ImageButton is pressed.
+- **`Aspect`:** Determines how the image is scaled within the button (e.g., Fill, AspectFit, AspectFill).
+- **`BorderColor`:** Sets the color of the button's border for styling.
+
+**Output:**
+
+https://github.com/user-attachments/assets/19a2f8bc-d9bb-4556-8d0f-e41413341306
+
+------
+
+## IndicatorView
+
+The IndicatorView control is used to display indicators that represent the number of items in a `CarouselView` and indicate the currently visible item.
+
+### Key Properties:
+- **`ItemsSource`:** Specifies the collection of items the IndicatorView represents.
+- **`IndicatorColor`:** Sets the color of unselected indicators.
+- **`SelectedIndicatorColor`:** Sets the color of the currently selected indicator.
+- **`IndicatorSize`:** Defines the size of each indicator dot for customization.
+
+**Output:**
+
+https://github.com/user-attachments/assets/8ea617d9-ac3b-46c2-99c8-db115271fa21
+
+------
+
+## Label
+
+The Label control is used to display text in a .NET MAUI application. It is a versatile control that supports a wide range of formatting and styling options.
+
+### Key Properties:
+- **`Text`:** Specifies the text to be displayed in the Label.
+- **`FontSize`:** Sets the size of the text for customization.
+- **`TextColor`:** Defines the color of the text.
+- **`HorizontalTextAlignment` and `VerticalTextAlignment`:** Adjust the alignment of the text within the Label.
+
+**Output:**
+
+![_19_Label](https://github.com/user-attachments/assets/200e3cd8-c584-4798-9f38-a216ee8dea25)
+
+------
+
+## Line
+
+The Line class is used to draw straight lines in a .NET MAUI application, ideal for creating custom graphics or visual dividers.
+
+### Key Properties:
+- **`X1` and `Y1`:** Define the starting point coordinates of the line.
+- **`X2` and `Y2`:** Define the ending point coordinates of the line.
+- **`Stroke`:** Specifies the color of the line.
+- **`StrokeThickness`:** Determines the width of the line.
+
+**Output:**
+
+![_20_Line](https://github.com/user-attachments/assets/9c2d1b38-f3f0-4f70-815a-289842909b85)
+
+------
+
+## ListView
+
+The ListView control is used to display a vertical scrollable list of items. It supports templates for defining how each item is displayed and allows for interactive features like item selection.
+
+### Key Properties:
+- **`ItemsSource`:** Specifies the collection of items to display in the ListView.
+- **`ItemTemplate`:** Defines the template for rendering each item in the list.
+- **`SelectionMode`:** Determines whether items can be selected and the type of selection (None, Single, or Multiple).
+- **`SeparatorColor`:** Sets the color of the separator between items for better styling.
+
+**Output:**
+
+

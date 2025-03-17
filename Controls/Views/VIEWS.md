@@ -90,7 +90,79 @@ The CarouselView control is a flexible container for displaying a collection of 
 
 **Output:**
 
+https://github.com/user-attachments/assets/aa53f326-bbd3-450f-a686-79eff5b9b11b
 
 ------
 
+## Cell
 
+The Cell class is used as a base class for creating cells in a list or table view. It provides a flexible way to display and format data in .NET MAUI applications.
+
+### Key Properties:
+- **`Height`:** Specifies the height of the cell.
+- **`IsEnabled`:** Determines whether the cell is interactive or disabled.
+- **`Parent`:** Refers to the parent object of the cell, typically a ListView or TableView.
+
+**Output:**
+
+https://github.com/user-attachments/assets/5beba81b-fa35-4604-b821-7382cf45d824
+
+------
+
+## CheckBox
+
+The CheckBox control allows users to select or deselect an option, making it useful for input scenarios that require binary choices in a .NET MAUI app.
+
+### Key Properties:
+- **`IsChecked`:** A boolean value indicating whether the CheckBox is checked or unchecked.
+- **`Color`:** Sets the color of the CheckBox when it is checked.
+- **`Command`:** Executes a bound command when the CheckBox's state changes.
+
+**Output:**
+
+https://github.com/user-attachments/assets/4b5ac89e-e79b-426d-98b0-0f4e21c9dfa7
+
+------
+
+## DatePicker
+
+The DatePicker control allows users to select a date from an interactive calendar, making it a convenient option for date-related inputs in .NET MAUI apps.
+
+### Key Properties:
+- **`Date`:** Gets or sets the selected date.
+- **`MinimumDate` and `MaximumDate`:** Define the range of dates the user can select.
+- **`Format`:** Specifies the display format of the date, such as `MM/dd/yyyy`.
+
+**Output:**
+
+https://github.com/user-attachments/assets/bf39d448-07b1-4e28-986a-eed940dd131d
+
+------
+
+## Editor
+
+The Editor control provides a multi-line text input field, ideal for scenarios where users need to enter or edit larger amounts of text in a .NET MAUI app.
+
+### Key Properties:
+- **`Text`:** Gets or sets the text displayed in the Editor.
+- **`Placeholder`:** Specifies the text that is displayed when the Editor is empty.
+- **`Keyboard`:** Determines the type of keyboard displayed, such as numeric or text-based.
+
+**Output:**
+
+https://github.com/user-attachments/assets/5cbe754a-767f-4b91-bfe7-0fc2e2acca36
+
+------
+
+## Entry
+
+The Entry control provides a single-line text input field, commonly used for forms or user data entry in .NET MAUI apps.
+
+### Key Properties:
+- **`Text`:** Gets or sets the text displayed in the Entry field.
+- **`Placeholder`:** Specifies the text displayed when the Entry field is empty.
+- **`IsPassword`:** A boolean value that determines whether the Entry is used for entering passwords, masking the input.
+
+**Output:**
+
+------

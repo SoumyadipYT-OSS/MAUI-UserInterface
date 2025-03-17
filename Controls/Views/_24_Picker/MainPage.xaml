@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_24_Picker.ViewModel"
+             x:DataType="local:MonkeyViewModel"
+             x:Class="_24_Picker.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <local:MonkeyViewModel />
+    </ContentPage.BindingContext>
+
+    
+    <StackLayout>
+        <!-- Picker Class -->
+        <Picker Title="Select a monkey" ItemsSource="{Binding Monkeys}" SelectedItem="{Binding SelectedMonkey, Mode=TwoWay}" />
+        <!-- Show the selected monkey name -->
+        <Label Text="{Binding SelectedMonkey}" />
+    </StackLayout>
+
+</ContentPage>

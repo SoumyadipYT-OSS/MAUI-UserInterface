@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_41_WebView.MainPage">
+
+    <ScrollView>
+        <!-- Full-screen Grid layout -->
+        <Grid RowDefinitions="Auto, *" ColumnSpacing="0">
+            <!-- Header with a Title and Navigation Bar -->
+            <Grid BackgroundColor="#512BD4" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Back Button -->
+                <Button Text="◀"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontSize="18"
+                    Clicked="OnBackClicked"
+                    VerticalOptions="Center" />
+
+                <!-- Page Title -->
+                <Label Grid.Column="1"
+                   Text="WebView Browser"
+                   FontSize="22"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Grid>
+
+
+            <!-- Progress Bar at the Top -->
+            <ProgressBar x:Name="LoadingProgressBar"
+                         IsVisible="False"
+                         Progress="0"
+                         VerticalOptions="Start"
+                         HeightRequest="4"
+                         BackgroundColor="#512BD4" />
+
+            <!-- WebView and Control Bar -->
+            <Grid Grid.Row="1" RowDefinitions="*, Auto">
+                <!-- WebView for browsing -->
+                <WebView x:Name="MyWebView"
+                         Source="https://bellatrix.aero/"
+                         Navigating="OnWebViewNavigating"
+                         Navigated="OnWebViewNavigated"
+                         HorizontalOptions="Fill"
+                          VerticalOptions="Fill" />
+
+                <!-- Footer Control Bar -->
+                <Grid Grid.Row="1" BackgroundColor="#F8F8F8" Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Back Button -->
+                    <Button Text="Back"
+                        Grid.Column="0"
+                        BackgroundColor="#EAEAEA"
+                        TextColor="#000"
+                        FontSize="14"
+                        Padding="10"
+                        Clicked="OnBackClicked" />
+
+                    <!-- Reload Button -->
+                    <Button Text="Refresh"
+                        Grid.Column="1"
+                        BackgroundColor="#EAEAEA"
+                        TextColor="#000"
+                        FontSize="14"
+                        Padding="10"
+                        Clicked="OnRefreshClicked"
+                        HorizontalOptions="Center" />
+
+                    <!-- Forward Button -->
+                    <Button Text="Forward"
+                        Grid.Column="2"
+                        BackgroundColor="#EAEAEA"
+                        TextColor="#000"
+                        FontSize="14"
+                        Padding="10"
+                        Clicked="OnForwardClicked" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

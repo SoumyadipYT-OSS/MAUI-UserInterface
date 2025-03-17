@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_13_Entry.MainPage"
+             BackgroundColor="#f0f0f5">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+        <!-- Standard Entry -->
+        <Border StrokeThickness="2" Stroke="#6200EE" BackgroundColor="White" Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="Standard Entry" 
+                       FontSize="26"
+                       TextColor="#6200EE"
+                       HorizontalOptions="Center" 
+                       Margin="0,10,0,5" />
+                <Entry x:Name="entry"
+                       Placeholder="Enter text"
+                       CharacterSpacing="10"
+                       MaxLength="10"
+                       Text="Cursor position and selection length set"
+                       CursorPosition="2"
+                       SelectionLength="10"
+                       ClearButtonVisibility="WhileEditing"
+                       TextTransform="Uppercase"
+                       TextChanged="OnEntryTextChanged"
+                       Completed="OnEntryCompleted"
+                       BackgroundColor="White"
+                       TextColor="#6200EE"
+                       FontSize="18"
+                       Margin="10"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Password Entry -->
+        <Border StrokeThickness="2" Stroke="#6200EE" BackgroundColor="White" Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="Password Entry" 
+                       FontSize="26"
+                       TextColor="#6200EE"
+                       HorizontalOptions="Center" 
+                       Margin="0,10,0,5" />
+                <Entry x:Name="passwordEntry"
+                       Placeholder="Enter password"
+                       IsPassword="True"
+                       ClearButtonVisibility="WhileEditing"
+                       TextChanged="OnEntryTextChanged"
+                       Completed="OnEntryCompleted"
+                       BackgroundColor="White"
+                       TextColor="#6200EE"
+                       FontSize="18"
+                       Margin="10"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Chat Entry with Send Button -->
+        <Border StrokeThickness="2" Stroke="#6200EE" BackgroundColor="White" Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="Chat Entry" 
+                       FontSize="26"
+                       TextColor="#6200EE"
+                       HorizontalOptions="Center" 
+                       Margin="0,10,0,5" />
+                <Entry x:Name="chatEntry"
+                       Placeholder="Type a message"
+                       ClearButtonVisibility="WhileEditing"
+                       Keyboard="Chat"
+                       ReturnType="Send"
+                       TextChanged="OnEntryTextChanged"
+                       Completed="OnEntryCompleted"
+                       BackgroundColor="White"
+                       TextColor="#6200EE"
+                       FontSize="18"
+                       Margin="10"/>
+            </VerticalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+
+</ContentPage>

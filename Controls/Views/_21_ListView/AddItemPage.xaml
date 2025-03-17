@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_21_ListView.ViewModel"
+             xmlns:model="clr-namespace:_21_ListView.Model"
+             x:DataType="local:MainViewModel"
+             x:Class="_21_ListView.AddItemPage"
+             Title="AddItemPage">
+
+    
+    
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
+    
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Entry x:Name="NameEntry" Placeholder="Enter item name" />
+            <Entry x:Name="DescriptionEntry" Placeholder="Enter description e.g.: 20 rupees Onion/kg" />
+            <Entry x:Name="QtyEntry" Placeholder="Enter Quantity" Keyboard="Numeric" />
+            <Entry x:Name="ImgUrlEntry" Placeholder="Paste image URL" />
+            <Entry x:Name="PriceEntry" Placeholder="Enter price" Keyboard="Numeric" />
+
+            <!-- Add new item button -->
+            <Button Text="Add" Clicked="OnAddItemCliecked" />
+
+            <!-- Feedback message -->
+            <Label x:Name="FeedbackLabel" Text="" TextColor="Green" IsVisible="False" />
+
+            <!-- The ListView panel in the AddItemPage -->
+            <ListView ItemsSource="{Binding GI}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:GroceryItem">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10" HeightRequest="150">
+                                <Image Source="{Binding ImageUrl}" WidthRequest="50" HeightRequest="50" Aspect="AspectFit" />
+                                <StackLayout Orientation="Vertical" Padding="10, 0, 0, 0">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Description}" FontAttributes="Italic" />
+                                    <Label Text="{Binding Quantity}" FontAttributes="Italic" />
+                                    <Label Text="{Binding Price, StringFormat='{0:N2}'}" FontAttributes="Bold" />
+                                </StackLayout>
+
+                                <Button Text="Edit" Clicked="OnEditItemClicked" CommandParameter="{Binding .}" BackgroundColor="Azure" TextColor="DeepSkyBlue" />
+                                <Button Text="Delete" Clicked="OnDeleteItemClicked" CommandParameter="{Binding .}" BackgroundColor="PaleVioletRed" TextColor="AntiqueWhite" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <!-- Finalize Button -->
+            <Button Text="Finalize" Clicked="OnFinalizeClicked" BackgroundColor="GreenYellow" TextColor="DarkSlateBlue" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
+    

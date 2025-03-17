@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_21_ListView.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_21_ListView"
+    x:DataType="local:AppShell"
+    Shell.FlyoutBehavior="Disabled"
+    Title="_21_ListView">
+
+
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <!-- Define styles for Shell items -->
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="DarkSlateBlue" />
+                <Setter Property="Shell.TabBarTitleColor" Value="Goldenrod" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="HotPink" />
+                <Setter Property="Shell.BackgroundColor" Value="Tan" />
+                <Setter Property="Shell.TitleColor" Value="CadetBlue" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Add Item" Icon="add_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AddItemPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

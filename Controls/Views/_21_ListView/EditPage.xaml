@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_21_ListView.Model"
+             x:DataType="local:GroceryItem"
+             x:Class="_21_ListView.EditPage"
+             Title="EditPage">
+
+
+    <ContentPage.BindingContext>
+        <local:GroceryItem />
+    </ContentPage.BindingContext>
+    
+    
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Entry Text="{Binding Name}" Placeholder="Name" />
+            <Entry Text="{Binding Description}" Placeholder="Description" />
+            <Entry Text="{Binding Quantity}" Placeholder="Quantity" Keyboard="Numeric" />
+            <Entry Text="{Binding ImageUrl}" Placeholder="Image URL" />
+            <Entry Text="{Binding Price}" Placeholder="Price" Keyboard="Numeric" />
+
+            <Button Text="Save" Clicked="OnSaveClicked" />
+            <Button Text="Cancel" Clicked="OnCancelClicked" />
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

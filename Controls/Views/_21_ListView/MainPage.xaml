@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_21_ListView.ViewModel"
+             xmlns:model="clr-namespace:_21_ListView.Model"
+             x:DataType="local:MainViewModel"
+             x:Class="_21_ListView.MainPage"
+             Title="MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <!-- Layout for empty message -->
+            <StackLayout IsVisible="{Binding GI.Count, Converter={StaticResource ZeroCountToBoolConverter}}" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Bucket is empty!" FontSize="Large" TextColor="Gray" />
+            </StackLayout>
+
+            <!-- Layout for item ListView class -->
+            <ListView RowHeight="120" ItemsSource="{Binding GI}" IsVisible="{Binding GI.Count, Converter={StaticResource NonZeroCountToBoolConverter}}" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:GroceryItem">
+                        <ViewCell>
+                            <Border StrokeThickness="1" Stroke="Gray" BackgroundColor="White" Margin="1" Padding="4">
+                                <Grid HeightRequest="100" Padding="1" ColumnSpacing="3" RowSpacing="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Image -->
+                                    <Image Grid.RowSpan="2" Grid.Column="0" Source="{Binding ImageUrl}" WidthRequest="80" HeightRequest="100" Aspect="AspectFit" />
+
+                                    <!-- Name and Quantity in the same column (upper and lower rows) -->
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" Margin="30, 10, 0, 0" WidthRequest="120" FontAttributes="Bold" FontSize="Medium" TextColor="Teal" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Quantity, StringFormat='Qty: {0}'}" Margin="5,0" FontAttributes="Italic" FontSize="Medium" TextColor="Teal" />
+
+                                    <!-- Description -->
+                                    <Label Grid.RowSpan="2" Grid.Column="2" WidthRequest="120" Text="{Binding Description}" Margin="20, 0, 0, 0" FontSize="Small" TextColor="ForestGreen" VerticalOptions="Center" />
+
+                                    <!-- Price -->
+                                    <Label Grid.RowSpan="2" Grid.Column="3" Text="{Binding Price, StringFormat='₹{0:N2} /-'}" FontAttributes="Bold" FontSize="Medium" TextColor="CornflowerBlue" VerticalOptions="Center" HorizontalOptions="End" />
+                                </Grid>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

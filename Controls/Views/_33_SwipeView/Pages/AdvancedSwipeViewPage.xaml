@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_33_SwipeView.Pages"
+             xmlns:cn="clr-namespace:_33_SwipeView.Converter"
+             xmlns:vm="clr-namespace:_33_SwipeView.ViewModels"
+             xmlns:m="clr-namespace:_33_SwipeView.Models"
+             x:Class="_33_SwipeView.Pages.AdvancedSwipeViewPage"
+             Title="AdvancedSwipeViewPage">
+    
+    
+    <!-- Define a converter resource for displaying the task state -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <cn:BoolToCompleteTextConverter x:Key="BoolToCompleteTextConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <!-- Set the BindingContext to our advanced view model -->
+    <ContentPage.BindingContext>
+        <vm:AdvancedSwipeViewViewModel />
+    </ContentPage.BindingContext>
+
+
+    
+    
+    <!-- The Advanced SwipeView Page starts here -->
+    <CollectionView ItemsSource="{Binding Tasks}" Margin="10">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <SwipeView>
+                    <!-- Left swipe action: Complete and Edit -->
+                    <SwipeView.LeftItems>
+                        <SwipeItems Mode="Execute">
+                            <SwipeItem Text="Complete"
+                                       BackgroundColor="DarkOliveGreen"
+                                       Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.CompletedTaskCommand}"
+                                       CommandParameter="{Binding .}"/>
+                            
+                            <SwipeItem Text="Edit"
+                                       BackgroundColor="CornflowerBlue"
+                                       Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditTaskCommand}"
+                                       CommandParameter="{Binding .}"/>
+                        </SwipeItems>
+                    </SwipeView.LeftItems>
+                    
+                    <!-- Right swipe action: Delete -->
+                    <SwipeView.RightItems>
+                        <SwipeItems Mode="Execute">
+                            <SwipeItem Text="Delete"
+                                       BackgroundColor="OrangeRed"
+                                       Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteTaskCommand}"
+                                       CommandParameter="{Binding .}" />
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+
+
+                    <Border Padding="10" Stroke="LightGray" Margin="10"
+                            StrokeThickness="1">
+                        <!-- Define the Border's shape -->
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="5" />
+                        </Border.StrokeShape>
+                        
+                        <!-- Define the Border's shadow properties -->
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Offset="2,2" Opacity="0.2" Radius="5" />
+                        </Border.Shadow>
+
+                        <Grid x:DataType="m:TaskModel">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding Name}" FontSize="18" />
+                            <Label Grid.Row="1"
+                                   Text="{Binding IsCompleted, Converter={StaticResource BoolToCompleteTextConverter}}"
+                                   FontSize="14" TextColor="Gray" />
+                        </Grid>
+                    </Border>
+                    
+                </SwipeView>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    
+</ContentPage>

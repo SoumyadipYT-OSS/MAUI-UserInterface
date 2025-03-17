@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_33_SwipeView.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_33_SwipeView"
+    xmlns:pages="clr-namespace:_33_SwipeView.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="_33_SwipeView">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Title="Advanced Swiper Class"
+        ContentTemplate="{DataTemplate pages:AdvancedSwipeViewPage}"
+        Route="AdvancedSwipeViewPage" />
+
+</Shell>

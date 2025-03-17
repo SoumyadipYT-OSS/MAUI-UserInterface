@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_33_SwipeView.MainPage">
+
+
+    <ScrollView>
+        <StackLayout Margin="20">
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItem Text="Delete" BackgroundColor="PaleVioletRed" Invoked="OnDelete" />
+                    <SwipeItem Text="Archive" BackgroundColor="SpringGreen" Invoked="OnArchive" />
+                </SwipeView.LeftItems>
+
+                <Border>
+                    <Label Text="Swipe to reveal options" HorizontalOptions="Center" VerticalOptions="Center" />
+                </Border>
+            </SwipeView>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

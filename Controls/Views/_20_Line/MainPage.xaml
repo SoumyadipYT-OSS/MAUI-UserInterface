@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_20_Line"
+             x:DataType="local:MainPage"
+             x:Class="_20_Line.MainPage">
+
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Line X1="40"
+                  Y1="0"
+                  X2="0"
+                  Y2="120"
+                  Stroke="Red" HorizontalOptions="Center" />
+
+
+            <Line Stroke="OrangeRed"
+                  X2="200" HorizontalOptions="Center" />
+
+
+            <Line X1="40"
+                  Y1="0"
+                  X2="0"
+                  Y2="120"
+                  StrokeThickness="4"
+                  Stroke="OliveDrab" HorizontalOptions="Center"
+                  StrokeDashArray="1,1"
+                  StrokeDashOffset="6" />
+
+
+            <StackLayout>
+                <!-- Zigzag Pattern -->
+                <Line X1="0" Y1="0" X2="50" Y2="50" Stroke="Navy" StrokeThickness="2" HorizontalOptions="Center" />
+                <Line X1="50" Y1="50" X2="100" Y2="0" Stroke="Navy" StrokeThickness="2" HorizontalOptions="Center" />
+                <Line X1="100" Y1="0" X2="150" Y2="50" Stroke="Navy" StrokeThickness="2" HorizontalOptions="Center" />
+                <Line X1="150" Y1="50" X2="200" Y2="0" Stroke="Navy" StrokeThickness="2" HorizontalOptions="Center" />
+                <Line X1="200" Y1="0" X2="250" Y2="50" Stroke="Navy" StrokeThickness="2" HorizontalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

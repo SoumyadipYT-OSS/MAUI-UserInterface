@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_11_DatePicker"
+             x:DataType="local:App"
+             x:Class="_11_DatePicker.MainPage"
+             BackgroundColor="#f0f0f5">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+        <!-- Current Date and Time Panel -->
+        <Border StrokeThickness="2" Stroke="#6200EE" BackgroundColor="White"
+                Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="Current Date and Time" 
+                       FontSize="26"
+                       TextColor="#6200EE"
+                       HorizontalOptions="Center" 
+                       Margin="0,10,0,5" />
+                <Label x:Name="currentTimeLabel"
+                       FontSize="24"
+                       TextColor="#6200EE"
+                       HorizontalOptions="Center" 
+                       Margin="0,0,0,10" />
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- DatePicker Panel -->
+        <Border StrokeThickness="2" Stroke="#6200EE" BackgroundColor="White"
+                Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="Select Date" 
+                       FontSize="26"
+                       TextColor="#6200EE"
+                       HorizontalOptions="Center" 
+                       Margin="0,10,0,5" />
+                <DatePicker x:Name="datePicker"
+                            Format="D"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="White"
+                            TextColor="#6200EE"
+                            FontSize="22"
+                            Margin="10"
+                            WidthRequest="300"
+                            HeightRequest="50"/>
+                <Button Text="Set to Current Date"
+                        FontSize="18"
+                        BackgroundColor="#6200EE"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10"
+                        Clicked="SetToCurrentDate" />
+            </VerticalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+
+</ContentPage>

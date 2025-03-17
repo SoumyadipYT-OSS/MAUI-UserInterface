@@ -1,0 +1,25 @@
+<Shell
+    x:Class="_39_TitleBar.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_39_TitleBar"
+    Shell.FlyoutBehavior="Flyout"
+    Title="_39_TitleBar">
+    
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Title="Advanced Title Bar"
+        ContentTemplate="{DataTemplate local:PageTwo}"
+        Route="PageTwo" />
+
+    <ShellContent
+        Title="Next Level Title Bar"
+        ContentTemplate="{DataTemplate local:PageThree}"
+        Route="PageThree" />
+
+</Shell>

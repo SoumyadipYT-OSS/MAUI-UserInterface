@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_27_Rectangle"
+             x:Class="_27_Rectangle.MainPage"
+             x:DataType="local:MainPage"
+             Title="Rectanlge Class Example">
+
+
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <Label Text="Basic Rectangle" />
+            <Rectangle WidthRequest="100" HeightRequest="100"
+                       Fill="#F4C430" Stroke="#423018" StrokeThickness="2" />
+
+            <Label Text="Advanced Rectangle defined purely in XAML" />
+            <Rectangle WidthRequest="200" HeightRequest="150"
+                       Stroke="#B7AD1A" StrokeThickness="3">
+                <!-- Gradient Fill -->
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#4DC6FF" Offset="0" />
+                        <GradientStop Color="#0173BA" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+                <!-- Apply rounded corners by clipping the rectangle -->
+                <Rectangle.Clip>
+                    <RoundRectangleGeometry Rect="0, 0, 200, 150" CornerRadius="30" />
+                </Rectangle.Clip>
+            </Rectangle>
+
+            <Label Text="Diagonal Gradient Rectangle with Shadow" />
+            <Rectangle WidthRequest="250" HeightRequest="150"
+                       Stroke="#7c0bee" StrokeThickness="4" Margin="0,0,0,20">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#F5EBFF" Offset="0.0" />
+                        <GradientStop Color="#EF0984" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Shadow>
+                    <Shadow Brush="#484571" Opacity="0.5" Offset="10, 10" />
+                </Rectangle.Shadow>
+            </Rectangle>
+
+            <Label Text="Pattern Fill Rectangle with Custom Dash Array" />
+            <Grid>
+                <Image Source="pattern.jpg" WidthRequest="200" HeightRequest="150" />
+                <Rectangle WidthRequest="200" HeightRequest="150"
+                           Stroke="#543007" StrokeThickness="3"
+                           StrokeDashArray="5,2">
+                    <Rectangle.Clip>
+                        <RoundRectangleGeometry Rect="0, 0, 200, 150" CornerRadius="6" />
+                    </Rectangle.Clip>
+                </Rectangle>
+            </Grid>
+
+            <Label Text="Radial Gradient Rectangle with Border and Drop Shadow" />
+            <Rectangle WidthRequest="220" HeightRequest="160"
+                       Stroke="#684d21" StrokeThickness="4"
+                       Margin="0,0,0,20">
+                <Rectangle.Fill>
+                    <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
+                        <GradientStop Color="#eeb825" Offset="0.2" />
+                        <GradientStop Color="#ea9800" Offset="1.0" />
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.Shadow>
+                    <Shadow Brush="#556007" Opacity="0.7" Offset="10,10" />
+                </Rectangle.Shadow>
+            </Rectangle>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

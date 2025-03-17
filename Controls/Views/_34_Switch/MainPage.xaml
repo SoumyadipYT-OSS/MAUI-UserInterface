@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_34_Switch"
+             x:DataType="local:MainPage"
+             x:Class="_34_Switch.MainPage">
+
+
+    <StackLayout>
+        <Border VerticalOptions="End" WidthRequest="100" HeightRequest="50" BackgroundColor="LightGoldenrodYellow">
+            <Switch x:Name="MySwitch"
+                    Scale="2"
+                    IsToggled="True"
+                    ThumbColor="Teal"
+                    OnColor="RosyBrown"
+                    Toggled="OnSwitchToggled"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+        </Border>
+
+        <Border>
+            <!-- Switch with Visual States -->
+            <Switch IsToggled="True" VerticalOptions="Center" HorizontalOptions="Center" Scale="2">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="On">
+                                <VisualState.Setters>
+                                    <Setter Property="ThumbColor"
+                                            Value="MediumSpringGreen" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Off">
+                                <VisualState.Setters>
+                                    <Setter Property="ThumbColor"
+                                            Value="Red" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Switch>
+        </Border>
+
+
+        <!-- Data bind a Switch-->
+        <StackLayout>
+            <Switch x:Name="styleSwitch" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />
+            <Label Text="Lorem ipsum dolor sit amet, elit rutrum, enim hendrerit augue vitae praesent sed non, lorem aenean quis praesent pede.">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding x:DataType='Switch', Source={x:Reference styleSwitch}, Path=IsToggled}"
+                                 Value="true">
+                        <Setter Property="FontAttributes"
+                                Value="Italic, Bold" />
+                        <Setter Property="FontSize"
+                                Value="18" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </StackLayout>
+
+
+        <!-- Custom Themed Switch -->
+        <local:CustomSwitch />
+
+
+        <!-- Custom Thumb Themed Switch -->
+        <StackLayout Margin="10, 20, 0, 0">
+            <Label Text="My Own Custom Toggle Button" FontSize="16" Padding="80,10" />
+            <BoxView x:Name="boxView" Style="{StaticResource DayModeBoxView}" HeightRequest="200" WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label x:Name="label" Text="Hello, World!" Style="{StaticResource DayModeLabel}" VerticalOptions="Center" HorizontalOptions="Center" />
+            <local:CustomThemeThumbSwitch Toggled="OnToggled" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

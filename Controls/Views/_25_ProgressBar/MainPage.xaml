@@ -1,0 +1,49 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_25_ProgressBar"
+             x:DataType="local:MainPage"
+             x:Class="_25_ProgressBar.MainPage">
+
+    <ContentPage.Resources>
+        <Style x:Key="GradientProgressBarStyle" TargetType="BoxView">
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HeightRequest" Value="20" />
+            <Setter Property="Background" Value="{StaticResource GradientBrush}" />
+        </Style>
+    </ContentPage.Resources>
+
+    
+    
+    <StackLayout>
+        <Label Text="Example 1" />
+        <Grid>
+            <BoxView Style="{StaticResource GradientProgressBarStyle}" />
+            <ProgressBar Progress="0.9"
+                         BackgroundColor="LightSlateGray"
+                         ProgressColor="LightGoldenrodYellow"
+                         HeightRequest="20" />
+        </Grid>
+
+
+        <Label Text="Example 2" />
+        <Grid>
+            <ProgressBar Progress="0.8" 
+                         BackgroundColor="LightSlateGray"
+                         ProgressColor="Orange" 
+                         HeightRequest="20" />
+        </Grid>
+
+
+        <Label Text="Example 3" />
+        <Entry x:Name="progressEntry" Placeholder="Enter progress (0 - 100) floating point enabled" Keyboard="Numeric" />
+        <Button Text="Update Progress" Clicked="OnUpdateProgressClicked" />
+        <Grid>
+            <ProgressBar x:Name="Ex3PB"
+                         Progress="0.8"
+                         BackgroundColor="Azure"
+                         ProgressColor="CornflowerBlue"
+                         HeightRequest="20" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

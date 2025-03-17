@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_35_SwitchCell.MainPage">
+
+
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="SwitchCell Class in .NET MAUI"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,10" />
+            <Label Text="The SwitchCell class in .NET MAUI (Microsoft.Maui.Controls) represents a cell with a label and an on/off switch, which can be used in a TableView to create forms or settings pages."
+                   FontSize="18"
+                   Margin="0,0,0,10" />
+            <Label Text="Properties:"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Margin="0,10,0,5" />
+            <Label Text="- OnColor: Bindable property for the color of the switch when it is on."
+                   FontSize="18"
+                   Margin="0,0,0,5" />
+            <Label Text="- On: Bindable property for the state of the switch."
+                   FontSize="18"
+                   Margin="0,0,0,5" />
+            <Label Text="- Text: Bindable property for the text displayed next to the switch."
+                   FontSize="18"
+                   Margin="0,0,0,5" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

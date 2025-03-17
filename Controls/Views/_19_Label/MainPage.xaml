@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_19_Label"
+             x:DataType="local:MainPage"
+             x:Class="_19_Label.MainPage">
+
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Hello, .NET MAUI!" FontSize="24"
+                   TextColor="BlueViolet" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Hi, " FontSize="24" TextColor="CadetBlue" />
+                        <Span Text="Developer" FontSize="22" TextColor="DeepSkyBlue" FontAttributes="Bold" />
+                        <Span Text="!!" FontSize="23" TextColor="RosyBrown" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <Label Text="Underlined and Uppercase Text" TextDecorations="Underline"
+                   TextTransform="Uppercase" FontSize="24" TextColor="DarkOliveGreen"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

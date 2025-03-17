@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_28_RefreshView.Pages.CustomRefreshPage"
+             Title="CustomRefreshPage">
+
+
+    <Grid>
+        <RefreshView x:Name="customRefreshView" Refreshing="OnRefresh">
+            <ScrollView>
+                <StackLayout Padding="10" Spacing="10">
+                    <Label Text="Pull down to refresh with our custom design!"
+                           FontSize="Medium" HorizontalOptions="Center" />
+                    <!-- Page Content examples -->
+                    <Label Text="Content item #1" />
+                    <Label Text="Content item #2" />
+                    <Label Text="Content item #3" />
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+        
+        <!-- Custom refresh indicator overlay -->
+        <!-- It is initially hidden and will be displayed during refresh -->
+        <Grid x:Name="customIndicator" IsVisible="False" BackgroundColor="#80000000">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <!-- You can replace this ActivityIndicator with any custom animation/image -->
+                <ActivityIndicator IsRunning="True" Color="White" Scale="2" />
+                <Label Text="Refreshing..." TextColor="White" HorizontalOptions="Center" Margin="0,10,0,0" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+    
+</ContentPage>

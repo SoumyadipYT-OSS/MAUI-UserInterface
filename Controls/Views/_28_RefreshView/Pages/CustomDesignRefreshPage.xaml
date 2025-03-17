@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:_28_RefreshView.Models"
+             x:Class="_28_RefreshView.Pages.CustomDesignRefreshPage"
+             Title="CustomDesignRefreshPage">
+
+
+    <Grid>
+        <!-- The RefreshView with scrolling content -->
+        <RefreshView x:Name="customStrokeRefreshPage" Refreshing="OnRefresh">
+            <ScrollView>
+                <StackLayout Padding="20" Spacing="15">
+                    <Label Text="Pull down to refresh with a custom stroke design!" 
+                           FontSize="Medium"
+                           HorizontalOptions="Center"/>
+                    <!-- Sample content items -->
+                    <Label Text="Item 1" />
+                    <Label Text="Item 2" />
+                    <Label Text="Item 3" />
+                    <Label Text="Item 4" />
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+
+        <!-- Overlay to display the custom stroke indicator -->
+        <Grid x:Name="customStrokeOverlay"
+              IsVisible="False"
+              BackgroundColor="#80000000">
+            <models:CustomStrokeRefresh x:Name="strokeIndicator"
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+
+</ContentPage>

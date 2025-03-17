@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_28_RefreshView.Pages.CustomRefreshIconPage"
+             Title="CustomRefreshIconPage">
+
+
+    <Grid>
+        <!-- The RefreshView wraps your scrolling content -->
+        <RefreshView x:Name="customIconRefreshView" Refreshing="OnRefresh">
+            <ScrollView>
+                <StackLayout Padding="20" Spacing="15">
+                    <Label Text="Pull down to refresh with a custom refresh icon!"
+                 FontSize="Medium"
+                 HorizontalOptions="Center"/>
+                    <!-- Sample content items -->
+                    <Label Text="Item 1" />
+                    <Label Text="Item 2" />
+                    <Label Text="Item 3" />
+                    <Label Text="Item 4" />
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+
+        <!-- Hybrid overlay for the custom refresh indicator -->
+        <Grid x:Name="customIconIndicator"
+          IsVisible="False"
+          BackgroundColor="#80000000">
+            <Image x:Name="refreshIconImage" Source="refreshicon.png" WidthRequest="50" HeightRequest="50"
+             HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_26_RadioButton.Views.GroupedRadioButtonsViewModelPage"
+             xmlns:local="clr-namespace:_26_RadioButton.ViewModels"
+             xmlns:views="clr-namespace:_26_RadioButton.Views"
+             x:DataType="local:AnimalsViewModel"
+             Title="GroupedRadioButtonsViewModelPage">
+
+
+    <StackLayout Margin="10"
+                 RadioButtonGroup.GroupName="{Binding GroupName}"
+                 RadioButtonGroup.SelectedValue="{Binding Selection}">
+        <Label Text="What's your favorite animal?" />
+        <RadioButton Content="Tiger"
+                     Value="Tiger" />
+        <RadioButton Content="Bear"
+                     Value="Bear" />
+        <RadioButton Content="Lion"
+                     Value="Lion" />
+        <RadioButton Content="Leopard"
+                     Value="Leopard" />
+
+        <Label x:Name="animalLabel">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Your choice: " />
+                    <Span Text="{Binding Selection}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+    
+</ContentPage>

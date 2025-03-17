@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_26_RadioButton.Views.RadioButtonControlTemplatePage"
+             Title="RadioButtonControlTemplatePage">
+
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Border Stroke="#6D9773" StrokeThickness="2" StrokeShape="RoundRectangle 10"
+                    BackgroundColor="#FFBA00" HeightRequest="90" WidthRequest="90"
+                    HorizontalOptions="Start" VerticalOptions="Start">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="Stroke"
+                                            Value="#FF3300" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#3A3967" />
+                                    <Setter Property="Stroke"
+                                            Value="#432344" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+
+                <Grid Margin="4"
+                      WidthRequest="90">
+                    <Grid Margin="0, 0, 4, 0" WidthRequest="18"
+                          HeightRequest="18" HorizontalOptions="End" VerticalOptions="Start">
+                        <Ellipse Stroke="#43533D" Fill="#E7EEFB"
+                                 WidthRequest="16" HeightRequest="16"
+                                 HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Ellipse x:Name="check" Fill="#43533D"
+                                 WidthRequest="8" HeightRequest="8"
+                                 HorizontalOptions="Center" VerticalOptions="Center" />
+                    </Grid>
+
+                    <!-- Content Presenter -->
+                    <ContentPresenter />
+                </Grid>
+            </Border>
+        </ControlTemplate>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+        </Style>
+    </ContentPage.Resources>
+
+    
+    <!-- Stack Layout for the page -->
+    <StackLayout Margin="10">
+        <Label Text="What's your favorite animal?" />
+        <StackLayout RadioButtonGroup.GroupName="animals"
+                     Orientation="Horizontal">
+            
+            <RadioButton Value="Elephant" CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="elephant.png"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Label Text="Elephant"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton Value="Koala" CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="koala.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                        <Label Text="Koala"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton Value="Monkey" CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="monkey.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                        <Label Text="Monkey"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton Value="Squirrell" CheckedChanged="OnAnimalRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="squirrell.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                        <Label Text="Squirrell"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>
+
+        <Label x:Name="animalLabel" Text="Your choice: " />
+
+    </StackLayout>
+</ContentPage>

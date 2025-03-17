@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_26_RadioButton.Views.BasicRadioButtonsPage"
+             xmlns:local="clr-namespace:_26_RadioButton"
+             x:DataType="local:MainPage"
+             Title="BasicRadioButtonsPage">
+
+
+    <ScrollView>
+        <StackLayout BackgroundColor="LightYellow" Margin="15,0" Padding="5">
+            <Label Text="What's your favourite animal?" />
+
+            <!-- RadioButton with no group name are mutually exclusive at the parent level. -->
+            <RadioButton Content="Elephant" CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+            <RadioButton Content="Koala" CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+            <RadioButton Content="Monkey" CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+            <RadioButton Content="Squirrell" CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+
+            <Label x:Name="animalLabel" Text="Your choice: " />
+
+
+
+            <Grid BackgroundColor="LightCoral" Margin="0,20,0,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <RadioButton Content="Elephant" CheckedChanged="OnAnimalImageRadioButtonCheckedChanged"
+                             Grid.Row="0" Grid.Column="0" />
+                <Image Source="elephant.png" HeightRequest="100"
+                             Grid.Row="0" Grid.Column="1" />
+
+                <RadioButton Content="Koala" CheckedChanged="OnAnimalImageRadioButtonCheckedChanged"
+                             Grid.Row="1" Grid.Column="0" />
+                <Image Source="koala.png" HeightRequest="100"
+                             Grid.Row="1" Grid.Column="1" />
+
+                <RadioButton Content="Monkey" CheckedChanged="OnAnimalImageRadioButtonCheckedChanged"
+                             Grid.Row="2" Grid.Column="0" />
+                <Image Source="monkey.png" HeightRequest="100"
+                             Grid.Row="2" Grid.Column="1" />
+
+                <RadioButton Content="Squirrell" CheckedChanged="OnAnimalImageRadioButtonCheckedChanged"
+                             Grid.Row="3" Grid.Column="0" />
+                <Image Source="squirrell.png" HeightRequest="100"
+                             Grid.Row="3" Grid.Column="1" />
+            </Grid>
+
+            <Grid BackgroundColor="LightGreen" Padding="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <Label x:Name="animalImageLabel" Text="Your choice: " FontSize="18"
+                       Grid.Row="0" Grid.Column="0" Margin="20, 50" />
+                <Image x:Name="ImageLabel" HeightRequest="100"
+                       Grid.Row="0" Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+        
+    </ScrollView>
+    
+    
+</ContentPage>

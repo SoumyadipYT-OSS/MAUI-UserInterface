@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_26_RadioButton.MainPage"
+             xmlns:local="clr-namespace:_26_RadioButton"
+             xmlns:views="clr-namespace:_26_RadioButton.Views"
+             x:DataType="local:MainPage"
+             Title="MainPage">
+
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Basic RadioButtons"
+                          Detail="Implement RadioButtons in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicRadioButtonsPage}" />
+
+                <TextCell Text="Basic RadioButton Visual States"
+                          Detail="Implement visual states for RadioButtons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicRadioButtonsVisualStatePage}"/>
+
+                <TextCell Text="Grouped Radio Buttons Page"
+                          Detail="Implement grouped RadioButtons in XAML"
+                          Command="{Binding NavigateCommand}" 
+                          CommandParameter="{x:Type views:GroupedRadioButtonsPage}"/>
+
+                <TextCell Text="Grouped Radio Button Page Code"
+                          Detail="Implementation of grouped RadioButtons in C#"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:GroupedRadioButtonPageCode}" />
+
+                <TextCell Text="Grouped Radio Button ViewModels Page"
+                          Detail="Implementation of binding to a ViewModel"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:GroupedRadioButtonsViewModelPage}" />
+
+                <TextCell Text="Radio Button Control Template Page"
+                          Detail="Implement a View to the Content Property (Template Page)"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:RadioButtonControlTemplatePage}" />
+
+                <TextCell Text="Radio Buttons Explained Page"
+                          Detail="Defined about Radio Buttons (documentation)"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:RadioButtonsExplainedPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

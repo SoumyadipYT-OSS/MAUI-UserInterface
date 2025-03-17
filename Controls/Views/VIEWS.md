@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/456aa58e-2045-4e0f-b22f-013f20343511
 # .NET MAUI Views
 
 .NET MAUI Views are the building blocks of user interfaces, providing a wide range of controls to create stunning cross-platform apps. From simple labels to advanced layouts, Views are versatile and powerful tools for UI development.
@@ -304,4 +306,221 @@ The ListView control is used to display a vertical scrollable list of items. It 
 
 **Output:**
 
+https://github.com/user-attachments/assets/3bb7443a-cf45-4129-a1df-ded08517ce66
+
+------
+
+## Map
+
+The Map control allows you to display and interact with maps in a .NET MAUI application. It supports features like pin placement, zooming, and map types for enhanced user experiences.
+
+### Key Properties:
+- **`MapType`:** Specifies the type of map to display, such as Street, Satellite, or Hybrid.
+- **`Pins`:** A collection of pins that mark specific locations on the map.
+- **`IsZoomEnabled`:** A boolean value indicating whether the user can zoom in and out on the map.
+- **`IsScrollEnabled`:** A boolean value indicating whether the user can scroll or pan the map.
+
+**Output:**
+
+https://github.com/user-attachments/assets/659b36ab-f8f5-4131-b84b-38504dad2d38
+
+------
+
+## Path
+
+The Path class is a powerful control for creating and displaying vector-based shapes in a .NET MAUI application. It is highly customizable and allows you to draw complex graphics.
+
+### Key Properties:
+- **`Data`:** Specifies the geometry data that defines the shape of the path (e.g., line, curve, or complex polygons).
+- **`Fill`:** Sets the color or brush used to fill the interior of the path.
+- **`Stroke`:** Defines the color or brush for the outline of the path.
+- **`StrokeThickness`:** Specifies the width of the path's outline.
+
+**Output:**
+
+https://github.com/user-attachments/assets/8609a7d5-73be-45e2-914f-0af6739329f7
+
+------
+
+## Picker
+
+The Picker control provides a dropdown-like interface for users to select a single item from a predefined list in a .NET MAUI application.
+
+### Key Properties:
+- **`ItemsSource`:** Specifies the collection of items to display in the picker.
+- **`SelectedIndex`:** Gets or sets the zero-based index of the currently selected item.
+- **`SelectedItem`:** Gets or sets the currently selected item from the `ItemsSource`.
+- **`Title`:** Sets the placeholder text displayed when no item is selected.
+
+**Output:**
+
+https://github.com/user-attachments/assets/657e484a-ae8a-4e63-8faf-86de31d41f2a
+
+------
+
+## ProgressBar
+
+The ProgressBar control is used to visually represent the progress of a task in a .NET MAUI application. It provides a simple way to give feedback on the completion status of operations.
+
+### Key Properties:
+- **`Progress`:** A double value (0.0 to 1.0) that represents the current progress of the task.
+- **`ProgressColor`:** Sets the color of the progress indicator for styling.
+- **`IsIndeterminate`:** A boolean value that indicates whether the progress is indeterminate (useful for ongoing tasks without a defined completion percentage).
+
+**Output:**
+
+https://github.com/user-attachments/assets/6ee2494a-cc06-4344-8cf1-24b6663cf1e5
+
+------
+
+## RadioButton
+
+The RadioButton control allows users to select a single option from a group of choices, making it ideal for implementing mutually exclusive selections in a .NET MAUI application.
+
+### Key Properties:
+- **`IsChecked`:** A boolean value indicating whether the RadioButton is selected.
+- **`Content`:** Specifies the content displayed alongside the RadioButton (e.g., text or an image).
+- **`GroupName`:** Assigns the RadioButton to a logical group, ensuring only one RadioButton in the group can be selected at a time.
+- **`Command`:** Executes a bound command when the RadioButton's state changes.
+
+**Output:**
+
+![_26_RadioButton](https://github.com/user-attachments/assets/9a0f81d0-5817-4ac6-866b-8c7a8696656b)
+
+------
+
+## Rectangle
+
+The Rectangle class is used to create rectangular shapes in a .NET MAUI application, offering customization options for styling and layout.
+
+### Key Properties:
+- **`WidthRequest` and `HeightRequest`:** Specify the desired width and height of the rectangle.
+- **`Fill`:** Sets the color or brush used to fill the interior of the rectangle.
+- **`Stroke`:** Defines the color or brush for the border of the rectangle.
+- **`StrokeThickness`:** Specifies the width of the rectangle's border.
+- **`RadiusX` and `RadiusY`:** Determine the x- and y-axis radii for rounded corners.
+
+
+**Output:**
+
+https://github.com/user-attachments/assets/1197bfe5-5aaf-457b-8389-ac5fe874cc63
+
+------
+
+## RefreshView
+
+The RefreshView control provides a pull-to-refresh gesture, allowing users to refresh the content of a view, such as a ListView or CollectionView, in a .NET MAUI application.
+
+### Key Properties:
+- **`Command`:** Specifies the command to execute when the refresh gesture is triggered.
+- **`IsRefreshing`:** A boolean value indicating whether the refresh is in progress.
+- **`Content`:** Represents the content to be refreshed, typically a scrollable view like a ListView or CollectionView.
+
+**Output:**
+
+https://github.com/user-attachments/assets/7a7d884b-0c11-41fb-8471-b8dc7bda453e
+
+------
+
+## ScrollView
+
+The ScrollView control enables scrolling for its content, allowing users to view content that is larger than the visible area in a .NET MAUI application.
+
+### Key Properties:
+- **`Content`:** Specifies the child element to display inside the ScrollView.
+- **`Orientation`:** Determines the direction of scrolling, such as `Vertical`, `Horizontal`, or `Both`.
+- **`IsEnabled`:** Indicates whether scrolling is enabled or disabled.
+
+**Output:**
+
+https://github.com/user-attachments/assets/ce38b3d5-eac8-4dce-8134-905e402b8c60
+
+------
+
+## SearchBar
+
+The SearchBar control allows users to input and submit search queries, making it ideal for filtering or searching within a .NET MAUI application.
+
+### Key Properties:
+- **`Text`:** Gets or sets the current search query entered in the SearchBar.
+- **`Placeholder`:** Specifies the text displayed when the SearchBar is empty.
+- **`SearchCommand`:** Executes a bound command when the user submits a search.
+- **`TextChanged`:** Triggers an event whenever the text in the SearchBar changes.
+
+
+**Output:**
+
+https://github.com/user-attachments/assets/069c7853-ddae-487c-9556-b0f3b52fac83
+
+------
+
+## Slider
+
+The Slider control provides a user-friendly interface for selecting a numeric value from a specified range in a .NET MAUI application. It is commonly used for scenarios like adjusting settings or inputting a range value.
+
+### Key Properties:
+- **`Minimum`:** Specifies the minimum value of the range.
+- **`Maximum`:** Specifies the maximum value of the range.
+- **`Value`:** Gets or sets the current value of the Slider.
+- **`ThumbColor`:** Sets the color of the slider's thumb (the draggable circle).
+- **`MinimumTrackColor` and `MaximumTrackColor`:** Define the colors for the track segments before and after the thumb.
+
+**Output:**
+
+https://github.com/user-attachments/assets/462a3170-e477-4de7-b117-70d16d248647
+
+------
+
+## Stepper
+
+The Stepper control provides an easy way for users to increment or decrement a numeric value, often used for input fields requiring small adjustments in a .NET MAUI application.
+
+### Key Properties:
+- **`Minimum`:** Specifies the minimum value for the Stepper.
+- **`Maximum`:** Specifies the maximum value for the Stepper.
+- **`Increment`:** Sets the value by which the Stepper increases or decreases.
+- **`Value`:** Gets or sets the current value of the Stepper.
+
+**Output:**
+
+https://github.com/user-attachments/assets/fb58fbc1-eff2-4e2c-a266-d4eb5febc4da
+
+------
+
+## SwipeView
+
+The SwipeView control provides swipe gestures to reveal additional content or actions, making it useful for implementing features like swipe-to-delete in a .NET MAUI application.
+
+### Key Properties:
+- **`LeftItems`, `RightItems`, `TopItems`, `BottomItems`:** Define the swipe items that appear on each side when swiped.
+- **`Content`:** Specifies the main content of the SwipeView.
+- **`Threshold`:** Sets the distance a user must swipe to trigger an action.
+
+### Key Events:
+- **`SwipeStarted`:** Occurs when a swipe gesture begins.
+- **`SwipeEnded`:** Occurs when a swipe gesture ends.
+- **`SwipeChanging`:** Occurs when the swipe position is changing.
+
+**Output:**
+
+https://github.com/user-attachments/assets/ce861653-ed15-480c-b8f9-529ff15b1c00
+
+------
+
+## Switch
+
+The Switch control represents a toggle mechanism, allowing users to switch between two states (e.g., On and Off) in a .NET MAUI application.
+
+### Key Properties:
+- **`IsToggled`:** A boolean value indicating whether the Switch is in the "On" (true) or "Off" (false) state.
+- **`OnColor`:** Specifies the color of the Switch when it is toggled "On."
+- **`ThumbColor`:** Sets the color of the Switch's thumb (the draggable part).
+
+### Key Events:
+- **`Toggled`:** Triggered when the state of the Switch changes.
+
+**Output:**
+
+
+------
 

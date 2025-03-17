@@ -519,6 +519,149 @@ The Switch control represents a toggle mechanism, allowing users to switch betwe
 
 **Output:**
 
+https://github.com/user-attachments/assets/32f48f9a-b1ef-49e1-9a1d-1fd944ab4b79
 
 ------
+
+## SwitchCell
+
+The SwitchCell class is a specialized cell used in a `TableView`. It provides a toggleable switch as part of its display, enabling users to interact with boolean settings in a .NET MAUI application.
+
+### Key Properties:
+- **`On`:** A boolean value indicating whether the switch is toggled "On" (true) or "Off" (false).
+- **`Text`:** Specifies the text displayed alongside the switch in the cell.
+
+### Key Events:
+- **`OnChanged`:** Triggered when the state of the switch changes.
+
+**Output:**
+
+https://github.com/user-attachments/assets/62b2f048-6a7c-4923-8ed3-b62b22b84b94
+
+------
+
+## TableView
+
+The TableView control provides a structured layout for displaying rows of information, which can include text, switches, and other controls. It is often used for forms or settings in a .NET MAUI application.
+
+### Key Properties:
+- **`Root`:** Represents the root element that contains all sections and cells in the TableView.
+- **`Intent`:** Specifies the purpose of the TableView, such as `Settings`, `Form`, or `Menu`.
+- **`HasUnevenRows`:** A boolean value indicating whether rows in the TableView can have different heights.
+
+### Key Elements:
+- **`TableRoot`:** The container for TableSections.
+- **`TableSection`:** A grouping element for organizing cells in the TableView.
+- **`Cells`:** Individual elements in the TableView, such as `TextCell`, `SwitchCell`, or custom cells.
+
+**Output:**
+
+https://github.com/user-attachments/assets/175d3294-d33f-420c-98ea-bc6eaf20870b
+
+------
+
+## TextCell
+
+The TextCell class is a simple cell type used in a `TableView`. It displays a label and an optional detail text, making it useful for settings, menus, or displaying paired information in a .NET MAUI application.
+
+### Key Properties:
+- **`Text`:** Specifies the primary text displayed in the cell.
+- **`Detail`:** Specifies the secondary text or additional information displayed below the primary text.
+- **`TextColor`:** Sets the color of the primary text.
+- **`DetailColor`:** Sets the color of the detail text.
+
+### Key Features:
+- TextCell is lightweight and supports basic customization for quick use cases.
+
+**Output:**
+
+https://github.com/user-attachments/assets/549f2bba-70e5-40aa-b9c6-d6d1e4157366
+
+------
+
+## TimePicker
+
+The TimePicker control allows users to select a specific time, making it useful for scheduling or time input scenarios in a .NET MAUI application.
+
+### Key Properties:
+- **`Time`:** Gets or sets the selected time as a `TimeSpan`.
+- **`Format`:** Specifies the display format for the selected time (e.g., "HH:mm" or "h:mm tt").
+- **`TextColor`:** Sets the color of the displayed time text.
+- **`FontAttributes`:** Defines font styling, such as bold or italic, for the time text.
+
+### Key Events:
+- **`PropertyChanged`:** Triggered when the selected time changes.
+
+**Output:**
+
+
+
+------
+
+## TitleBar
+
+The TitleBar class provides control over the app's title bar in .NET MAUI applications, allowing developers to customize its appearance and behavior.
+
+### Key Properties:
+- **`Title`:** Specifies the text displayed in the title bar.
+- **`BackgroundColor`:** Sets the background color of the title bar.
+- **`ForegroundColor`:** Defines the color of the text and icons displayed on the title bar.
+- **`IsVisible`:** A boolean value indicating whether the title bar is displayed.
+
+### Key Methods:
+- **`SetCustomView`:** Allows developers to replace the default title bar with a custom view for more advanced designs.
+
+### Key Events:
+- **`TitleBarChanged`:** Triggered when there are changes to the title bar's properties or state.
+
+**Output:**
+
+https://github.com/user-attachments/assets/aa0bd15d-da12-4331-9844-c743570ac9b5
+
+------
+
+## TwoPaneView
+
+The TwoPaneView control is designed for dual-screen devices and scenarios where you need to display two panes of content side-by-side or in a stacked layout within a .NET MAUI application.
+
+### Key Properties:
+- **`Pane1` and `Pane2`:** Define the content displayed in each pane.
+- **`PanePriority`:** Specifies which pane is given priority when the available space is constrained.
+- **`MinWideModeWidth`:** Sets the minimum width required to switch to wide mode, displaying both panes side by side.
+- **`TallModeThreshold`:** Determines the threshold height for switching to tall mode, where panes are stacked vertically.
+
+### Key Events:
+- **`ModeChanged`:** Triggered when the layout mode of the TwoPaneView changes (e.g., from wide to tall).
+
+**Output:**
+
+https://github.com/user-attachments/assets/80bc258a-705f-4c4c-9742-daeeaf32a118
+
+------
+
+## WebView
+
+The WebView control enables the display of web content within a .NET MAUI application. It is a versatile control that supports features like loading URLs and displaying HTML content.
+
+### Key Properties:
+- **`Source`:** Specifies the URL or HTML content to be displayed in the WebView.
+- **`CanGoBack` and `CanGoForward`:** Indicate whether the WebView can navigate back or forward in its navigation history.
+- **`IsVisible`:** Determines the visibility of the WebView control on the screen.
+
+### Key Methods:
+- **`GoBack`:** Navigates back in the navigation history, if possible.
+- **`GoForward`:** Navigates forward in the navigation history, if possible.
+- **`Reload`:** Refreshes the current content displayed in the WebView.
+
+### Key Events:
+- **`Navigated`:** Triggered after the WebView successfully navigates to a new page.
+- **`Navigating`:** Triggered while the WebView is in the process of navigating to a new page.
+
+**Output:**
+
+https://github.com/user-attachments/assets/9d61ea97-08d5-4cb6-93ef-e8f7ec027649
+
+------
+
+
 

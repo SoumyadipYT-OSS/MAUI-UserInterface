@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:_32_Stepper.ViewModels"
+             x:Class="_32_Stepper.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <vm:StepperViewModel />
+    </ContentPage.BindingContext>
+    
+    
+    <StackLayout Margin="20" Padding="0,50,0,0">
+        <Label x:Name="_rotatingLabel" Text="ROTATING TEXT" FontSize="18"
+               HorizontalOptions="Center" VerticalOptions="Center" Padding="0,0,0,100" />
+        <Stepper Maximum="360" Increment="30" ValueChanged="OnStepperValueChanged"
+                 HorizontalOptions="Center" VerticalOptions="Center" />
+        <Label Text="{Binding StepperValue}"
+               HorizontalOptions="Center" VerticalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>

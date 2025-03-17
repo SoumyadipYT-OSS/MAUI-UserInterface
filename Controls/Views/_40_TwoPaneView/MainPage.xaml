@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_40_TwoPaneView.MainPage">
+
+
+    <!-- A Grid with two columns to simulate two-pane layout -->
+    <Grid x:Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <!-- Columns defined so we can adapt from dual- to single-pane -->
+            <ColumnDefinition x:Name="Col1" Width="*" />
+            <ColumnDefinition x:Name="Col2" Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Pane 1: Example content such as a navigation list -->
+        <Border 
+            Grid.Column="0" BackgroundColor="LightBlue"
+            Padding="20" Margin="10">
+            <Label Text="Pane 1: Navigation/List"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="20" />
+        </Border>
+
+        <!-- Pane 2: Example content such as detailed information -->
+        <Border 
+            Grid.Column="1" BackgroundColor="LightCoral"
+            Padding="20" Margin="10">
+            <Label Text="Pane 2: Details/Content"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="20" />
+        </Border>
+    </Grid>
+
+</ContentPage>

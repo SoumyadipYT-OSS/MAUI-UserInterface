@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_40_TwoPaneView.AdvancedTwoPaneViewPage"
+             Title="AdvancedTwoPaneViewPage">
+
+
+    <!-- MainGrid is our container for the two panes -->
+    <Grid x:Name="MainGrid">
+        <!-- Define visual states for Dual-Pane and Single-Pane -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="PaneStates">
+                <!-- DualPane state: Both columns visible -->
+                <VisualState x:Name="DualPane">
+                    <VisualState.Setters>
+                        <!-- Setting both columns to share available space -->
+                        <Setter Property="ColumnDefinition.Width" TargetName="Col1" Value="*" />
+                        <Setter Property="ColumnDefinition.Width" TargetName="Col2" Value="*" />
+                    </VisualState.Setters>
+                </VisualState>
+                <!-- SinglePane state: Second column collapsed -->
+                <VisualState x:Name="SinglePane">
+                    <VisualState.Setters>
+                        <Setter Property="ColumnDefinition.Width" TargetName="Col1" Value="*" />
+                        <Setter Property="ColumnDefinition.Width" TargetName="Col2" Value="0" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!-- Define two columns for the panes -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="Col1" Width="*" />
+            <ColumnDefinition x:Name="Col2" Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Pane 1 Content -->
+        <Border Grid.Column="0"
+                BackgroundColor="LightSkyBlue"
+                Padding="20"
+                Margin="10">
+            <StackLayout>
+                <Label Text="Advanced Pane 1"
+                       FontSize="26"
+                       HorizontalOptions="Center" />
+                <Button Text="Action 1"
+                        HorizontalOptions="Center" />
+            </StackLayout>
+        </Border>
+
+        <!-- Pane 2 Content -->
+        <Border Grid.Column="1"
+                BackgroundColor="LightSalmon"
+                Padding="20"
+                Margin="10">
+            <StackLayout>
+                <Label Text="Advanced Pane 2"
+                       FontSize="26"
+                       HorizontalOptions="Center" />
+                <Button Text="Action 2"
+                        HorizontalOptions="Center" />
+            </StackLayout>
+        </Border>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_01_Align_and_Position_Controls.Examples.BasicPage"
+             Title="BasicPage">
+
+
+    <StackLayout Margin="20" Padding="10">
+        <!-- Top Start Alignment -->
+        <Label Text="Top Start"
+               BackgroundColor="LightBlue"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+
+        <!-- Center Alignment -->
+        <Label Text="Center"
+               BackgroundColor="LightGreen"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <!-- Bottom End Alignment -->
+        <Label Text="Bottom End"
+               BackgroundColor="LightPink"
+               HorizontalOptions="End"
+               VerticalOptions="End" />
+    </StackLayout>
+
+</ContentPage>

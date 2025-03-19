@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_01_Align_and_Position_Controls.Examples.AdvancedPage"
+             Title="AdvancedPage">
+
+
+    <StackLayout Spacing="20" Margin="20">
+
+        <!-- Grid Layout -->
+        <Grid BackgroundColor="LightCyan" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Top-Left -->
+            <Label Text="Top-Left"
+                   BackgroundColor="LightBlue"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="0" Grid.Column="0" />
+
+            <!-- Center -->
+            <Label Text="Center"
+                   BackgroundColor="LightGreen"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="1" Grid.Column="1" />
+
+            <!-- Bottom-Right -->
+            <Label Text="Bottom-Right"
+                   BackgroundColor="LightPink"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="2" Grid.Column="2" />
+        </Grid>
+
+        
+        
+        <!-- FlexLayout -->
+        <FlexLayout Direction="Row"
+                    JustifyContent="SpaceAround"
+                    AlignItems="Center"
+                    BackgroundColor="LightYellow"
+                    Margin="10"
+                    Padding="10">
+            <Label Text="Item 1"
+                   BackgroundColor="CornflowerBlue"
+                   HeightRequest="50"
+                   WidthRequest="100" />
+            <Label Text="Item 2"
+                   BackgroundColor="SkyBlue"
+                   HeightRequest="50"
+                   WidthRequest="100" />
+            <Label Text="Item 3"
+                   BackgroundColor="SteelBlue"
+                   HeightRequest="50"
+                   WidthRequest="100" />
+        </FlexLayout>
+
+    </StackLayout>
+
+</ContentPage>

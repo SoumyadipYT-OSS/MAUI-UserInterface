@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_01_Align_and_Position_Controls.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_01_Align_and_Position_Controls"
+    xmlns:ex="clr-namespace:_01_Align_and_Position_Controls.Examples"
+    Shell.FlyoutBehavior="Flyout"
+    Title="_01_Align_and_Position_Controls">
+
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Basic Demo in C#"
+        ContentTemplate="{DataTemplate ex:BasicDemo}" />
+
+
+    <ShellContent
+        Title="Advanced Demo in C#"
+        ContentTemplate="{DataTemplate ex:AdvancedDemo}" />
+
+    <ShellContent
+        Title="Basic Page in XAML"
+        ContentTemplate="{DataTemplate ex:BasicPage}"
+        Route="BasicPage" />
+
+    <ShellContent
+        Title="Advanced Page in XAML"
+        ContentTemplate="{DataTemplate ex:AdvancedPage}"
+        Route="AdvancedPage" />
+
+</Shell>

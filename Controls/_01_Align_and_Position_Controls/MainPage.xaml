@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_01_Align_and_Position_Controls.MainPage">
+
+
+    <ScrollView>
+        <Grid RowSpacing="20" ColumnSpacing="20" Padding="20">
+
+            <!-- Define Rows and Columns -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Header -->
+            <Label Grid.Row="0" Grid.Column="1"
+               Text="Alignment and Positioning"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0,10,0,10" />
+
+            <!-- Center Section -->
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="3"
+                     BackgroundColor="LightGray"
+                     Padding="15"
+                     Spacing="10">
+                <Label Text="Welcome to the Advanced UI"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="DarkSlateGray" />
+                <Button Text="Get Started"
+                    BackgroundColor="DarkSeaGreen"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </StackLayout>
+
+            <!-- Footer -->
+            <FlexLayout Grid.Row="2" Grid.ColumnSpan="3"
+                    Direction="Row"
+                    JustifyContent="SpaceAround"
+                    AlignItems="Center"
+                    BackgroundColor="LightBlue"
+                    Padding="10">
+                <Label Text="Home"
+                   TextColor="White"
+                   FontSize="14"
+                   HorizontalOptions="Center" />
+                <Label Text="About"
+                   TextColor="White"
+                   FontSize="14"
+                   HorizontalOptions="Center" />
+                <Label Text="Contact"
+                   TextColor="White"
+                   FontSize="14"
+                   HorizontalOptions="Center" />
+            </FlexLayout>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

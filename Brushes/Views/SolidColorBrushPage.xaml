@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Brushes.Views.SolidColorBrushPage"
+             xmlns:views="clr-namespace:Brushes.Views"
+             x:DataType="views:SolidColorBrushPage"
+             Title="SolidColorBrushPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Label 
+                Text="SolidColorBrush Topics"
+                FontSize="Subtitle"
+                HorizontalOptions="Center" />
+            
+            <!-- Example 1: Basic SolidColorBrush -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="Basic SolidColorBrush" 
+                            FontAttributes="Bold" 
+                            Margin="0,0,0,10"/>
+                    <Border Stroke="#000000" 
+                            StrokeThickness="2" 
+                            Padding="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+                        <Rectangle HeightRequest="100" 
+                                   WidthRequest="300" 
+                                   HorizontalOptions="Center"
+                                   RadiusX="5" RadiusY="5">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="BlueViolet" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Border>
+                    <Label Text="Using a SolidColorBrush with BlueViolet color" 
+                            Margin="0,10,0,0" 
+                            FontSize="12"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 2: SolidColorBrush with Opacity -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="SolidColorBrush with Opacity" 
+                           FontAttributes="Bold" 
+                           Margin="0,0,0,10"/>
+                    <Grid>
+                        <Rectangle Fill="Blue" 
+                                   HeightRequest="100" 
+                                   WidthRequest="200" 
+                                   HorizontalOptions="Center"/>
+                        <Rectangle HeightRequest="80" 
+                                   WidthRequest="250" 
+                                   HorizontalOptions="Center"
+                                   Opacity="0.5">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="Red" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Grid>
+                    <Label Text="Red brush with 50% opacity on black background" 
+                           Margin="0,10,0,0" 
+                           FontSize="12"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 3: SolidColorBrush for UI elements -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Label Text="SolidColorBrush for UI Elements" 
+                           FontAttributes="Bold" 
+                           Margin="0,0,0,10"/>
+
+                    <Border StrokeShape="RoundRectangle 5"
+                            Padding="20"
+                            HorizontalOptions="Center"
+                            Opacity="0.8">
+                        <Border.Stroke>
+                            <SolidColorBrush Color="MediumSeaGreen" />
+                        </Border.Stroke>
+                        <Border.Background>
+                            <SolidColorBrush Color="LightGreen" />
+                        </Border.Background>
+                        <Label Text="Styled with SolidColorBrush"
+                               TextColor="DarkGreen"
+                               FontAttributes="Bold"
+                               Padding="20,20" />
+                    </Border>
+
+                    <Label Text="Using SolidColorBrush for border and background" 
+                           Margin="0,10,0,0" 
+                           FontSize="12"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 4: SolidColorBrush with binding -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Dynamic SolidColorBrush with Binding"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <Label Text="Red Component:"
+                           Margin="0,0,0,5" />
+                    <Slider x:Name="redSlider"
+                            Minimum="0"
+                            Maximum="255"
+                            Value="100" Margin="0,0,0,10" />
+
+                    <Label Text="Green Component:" 
+                           Margin="0,5,0,5" />
+                    <Slider x:Name="greenSlider"
+                            Minimum="0"
+                            Maximum="255"
+                            Value="150"
+                            Margin="0,0,0,10" />
+
+                    <Label Text="Blue Component:"
+                           Margin="0,5,0,5" />
+                    <Slider x:Name="blueSlider"
+                            Minimum="0"
+                            Maximum="255"
+                            Value="200"
+                            Margin="0,0,0,10" />
+
+                    <Ellipse HeightRequest="120"
+                             WidthRequest="120"
+                             HorizontalOptions="Center"
+                             Margin="0,10">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{Binding ColorValue}" />
+                        </Ellipse.Fill>                        
+                    </Ellipse>
+
+                    <Label Text="Move the sliders to change brush color"
+                           Margin="0,10,0,0"
+                           FontSize="Default" />
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 5: Theme Switching with SolidColorBrush -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Theme Switching with SolidColorBrush"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="15" Margin="0,0,0,15">
+                        <Label Text="Toggle Theme: " VerticalOptions="Center" />
+                        <Switch x:Name="themeSwitch" Toggled="OnThemeSwitchToggled" />
+                        <Label x:Name="themeLabel" Text="Light Mode" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <Border x:Name="themeContainer"
+                            StrokeThickness="1"
+                            Padding="20"
+                            HeightRequest="200"
+                            WidthRequest="300" HorizontalOptions="Center">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12" />
+                        </Border.StrokeShape>
+                        <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                            <Label x:Name="themeTitleLabel" 
+                                   Text="Light Theme Content" 
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center" />
+
+                            <Button x:Name="themeButton" 
+                                    Text="Theme Button" 
+                                    HorizontalOptions="Center"
+                                    WidthRequest="150" />
+
+                            <CheckBox x:Name="themeCheckBox" 
+                                      IsChecked="True"
+                                      HorizontalOptions="Center" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Label Text="Toggle switch to change between light and dark themes"
+                           Margin="0,10,0,0"
+                           FontSize="Default" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

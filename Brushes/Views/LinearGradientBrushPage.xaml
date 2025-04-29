@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Brushes.Views.LinearGradientBrushPage"
+             xmlns:views="clr-namespace:Brushes.Views"
+             x:DataType="views:LinearGradientBrushPage"
+             Title="LinearGradientBrushPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Label Text="LinearGradientBrush Examples"
+                   FontSize="Subtitle"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10" />
+            
+            <!-- Example 1: Horizontal Linear Gradient -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Horizontal Linear Gradient"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <Rectangle HeightRequest="100"
+                               WidthRequest="300"
+                               RadiusX="8" RadiusY="8"
+                               HorizontalOptions="Center">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0.5"
+                                                 EndPoint="1,0.5">
+                                <GradientStop Color="#FF0000" Offset="0.0" />
+                                <GradientStop Color="#FFFF00" Offset="0.5" />
+                                <GradientStop Color="#00FF00" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Text="Red -> Yellow -> Green (Left to Right)"
+                           Margin="0,10,0,0" FontSize="12" />
+                    <Label Text="StartPoint='0,0.5' EndPoint='1,0.5'"
+                           Margin="0,2,0,0" FontSize="10" TextColor="{StaticResource Gray500}" />
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 2: Vertical Linear Gradient -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10" StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Vertical Linear Gradient"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <Rectangle HeightRequest="200"
+                               WidthRequest="150"
+                               RadiusX="8" RadiusY="8"
+                               HorizontalOptions="Center">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Color="#0000FF" Offset="0.0" />
+                                <GradientStop Color="#00FFFF" Offset="0.5" />
+                                <GradientStop Color="#FFFFFF" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Text="Blue -> Cyan -> White (Top to Bottom)"
+                           Margin="0,10,0,0" FontSize="12" />
+                    <Label Text="StartPoint='0.5,0' EndPoint='0.5,1'"
+                           Margin="0,2,0,0" FontSize="10"
+                           TextColor="{StaticResource Gray500}" />
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 3: Diagonal Linear Gradient -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Diagnonal Linear Gradient"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <Border HeightRequest="150"
+                            WidthRequest="300"
+                            Padding="20" HorizontalOptions="Center"
+                            StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#6A0DAD" Offset="0.0" />
+                                <GradientStop Color="#FF69B4" Offset="0.5" />
+                                <GradientStop Color="#FF8C00" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Label Text="Gradient Diagonal"
+                               TextColor="White"
+                               FontSize="18"
+                               HorizontalOptions="Center" VerticalOptions="Center" />
+                    </Border>
+                    <Label Text="Purple → Pink → Orange (Top-Left to Bottom-Right)"
+                           Margin="0,10,0,0"
+                           FontSize="12" />
+                    <Label Text="StartPoint='0,0' EndPoint='1,1'"
+                           Margin="0,2,0,0" FontSize="10"
+                           TextColor="{StaticResource Gray500}" />
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 4: Reverse Diagonal Linear Gradient -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Reverse Diagonal Linear Gradient"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <Ellipse HeightRequest="180"
+                             WidthRequest="180"
+                             HorizontalOptions="Center">
+                        <Ellipse.Fill>
+                            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                                <GradientStop Color="#8B4513" Offset="0.0" />
+                                <GradientStop Color="#D2691E" Offset="0.5" />
+                                <GradientStop Color="#F4A460" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <Label Text="Brown tones (Top-Right to Bottom-Left)"
+                           Margin="0,10,0,0"
+                           FontSize="12" />
+                    <Label Text="StartPoint='1,0' EndPoint='0,1'"
+                           Margin="0,2,0,0" FontSize="10"
+                           TextColor="{StaticResource Gray500}" />
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 5: Multi-Stop Linear Gradient -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15" Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Multi-Stop Linear Gradient"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+                    <Rectangle HeightRequest="120"
+                               WidthRequest="300"
+                               RadiusX="5" RadiusY="5"
+                               HorizontalOptions="Center">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                <GradientStop Color="#FF0000" Offset="0.0" />
+                                <GradientStop Color="#FF7F00" Offset="0.2" />
+                                <GradientStop Color="#FFFF00" Offset="0.3" />
+                                <GradientStop Color="#00FF00" Offset="0.5" />
+                                <GradientStop Color="#0000FF" Offset="0.7" />
+                                <GradientStop Color="#4B0082" Offset="0.8" />
+                                <GradientStop Color="#8F00FF" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Text="Rainbow colors with multiple gradient stops"
+                           Margin="0,10,0,0"
+                           FontSize="12" />
+                </VerticalStackLayout>
+            </Border>
+            
+            
+            <!-- Example 6: Interactive Linear Gradient -->
+            <Border StrokeThickness="1"
+                    Stroke="{StaticResource Gray300}"
+                    Padding="15" Margin="0,10"
+                    StrokeShape="RoundRectangle 8">
+                <VerticalStackLayout>
+                    <Label Text="Interactive Linear Gradient"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,10" />
+
+                    <Label Text="Gradient Angle: " Margin="0,0,0,5" />
+
+                    <Slider x:Name="angleSlider"
+                            Minimum="0"
+                            Maximum="360" Value="0"
+                            Margin="0,0,0,15" />
+
+                    <Rectangle x:Name="interactiveGradient"
+                               HeightRequest="150" WidthRequest="300"
+                               RadiusX="10" RadiusY="10"
+                               HorizontalOptions="Center" />
+
+                    <Label x:Name="angleDisplay" Text="Angle: 0°"
+                           Margin="0,10,0,0" FontSize="12"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

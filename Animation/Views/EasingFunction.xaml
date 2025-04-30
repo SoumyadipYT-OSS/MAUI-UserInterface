@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Animation.Views.EasingFunction"
+             Title="Easing Functions">
+
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <VerticalStackLayout Grid.Row="0" Padding="20" Spacing="10">
+            <Label Text="Easing Function Demonstration" 
+                   FontSize="24" 
+                   HorizontalOptions="Center" />
+            <Label Text="Select an easing function and tap 'Run Animation' to see it in action"
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <Grid RowDefinitions="Auto,*" Padding="20">
+                <!-- Controls -->
+                <VerticalStackLayout Grid.Row="0" Spacing="15" Margin="0,0,0,20">
+                    <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                        <Button x:Name="RunAnimationButton" 
+                                Text="Run Animation" 
+                                Clicked="OnRunAnimationClicked" 
+                                HorizontalOptions="Center" />
+                        <Button x:Name="ResetButton" 
+                                Text="Reset" 
+                                Clicked="OnResetClicked" 
+                                HorizontalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <Border Stroke="LightGray"
+                            StrokeThickness="1"
+                            StrokeShape="Rectangle"
+                            Padding="15">
+                        <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto">
+                            <Label Text="Select Easing:" 
+                                   VerticalOptions="Center"
+                                   Grid.Row="0"
+                                   Grid.Column="0" />
+                            <Picker x:Name="EasingPicker"
+                                    Title="Select an easing function"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    SelectedIndexChanged="OnEasingSelected">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Linear</x:String>
+                                        <x:String>BounceIn</x:String>
+                                        <x:String>BounceOut</x:String>
+                                        <x:String>CubicIn</x:String>
+                                        <x:String>CubicOut</x:String>
+                                        <x:String>CubicInOut</x:String>
+                                        <x:String>SinIn</x:String>
+                                        <x:String>SinOut</x:String>
+                                        <x:String>SinInOut</x:String>
+                                        <x:String>SpringIn</x:String>
+                                        <x:String>SpringOut</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+
+                            <Label Text="Animation:" 
+                                   VerticalOptions="Center"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Margin="0,10,0,0" />
+                            <Picker x:Name="AnimationPicker"
+                                    Title="Select animation type"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="0,10,0,0">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Translation</x:String>
+                                        <x:String>Rotation</x:String>
+                                        <x:String>Scale</x:String>
+                                        <x:String>Fade</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+
+                            <Label Text="Duration (ms):" 
+                                   VerticalOptions="Center"
+                                   Grid.Row="2"
+                                   Grid.Column="0"
+                                   Margin="0,10,0,0" />
+                            <Slider x:Name="DurationSlider"
+                                    Minimum="500"
+                                    Maximum="3000"
+                                    Value="1500"
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Margin="0,10,0,0" />
+                        </Grid>
+                    </Border>
+
+                    <!-- Current easing function display -->
+                    <Border Stroke="LightGray"
+                            StrokeThickness="1"
+                            StrokeShape="Rectangle"
+                            Padding="15">
+                        <VerticalStackLayout>
+                            <Label Text="Current Selection:" FontAttributes="Bold" />
+                            <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto">
+                                <Label Text="Easing:" Grid.Row="0" Grid.Column="0" />
+                                <Label x:Name="CurrentEasingLabel" Text="Linear" Grid.Row="0" Grid.Column="1" />
+
+                                <Label Text="Animation:" Grid.Row="1" Grid.Column="0" />
+                                <Label x:Name="CurrentAnimationLabel" Text="Translation" Grid.Row="1" Grid.Column="1" />
+
+                                <Label Text="Duration:" Grid.Row="2" Grid.Column="0" />
+                                <Label x:Name="CurrentDurationLabel" Text="1500 ms" Grid.Row="2" Grid.Column="1" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+
+                <!-- Animation Canvas -->
+                <Border Grid.Row="1"
+                        Stroke="Gray"
+                        StrokeThickness="1"
+                        StrokeShape="Rectangle"
+                        Padding="0"
+                        HeightRequest="300"
+                        BackgroundColor="#f0f0f0">
+                    <Grid x:Name="AnimationContainer">
+                        <!-- Animation track -->
+                        <BoxView Color="#e0e0e0" 
+                                 HeightRequest="10" 
+                                 VerticalOptions="Center" 
+                                 HorizontalOptions="Fill" />
+
+                        <!-- Animation element -->
+                        <Image x:Name="AnimationElement"
+                               Source="dotnet_bot.png"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+                <!-- Description section -->
+                <Border Grid.Row="2"
+                        Stroke="LightGray"
+                        StrokeThickness="1"
+                        StrokeShape="Rectangle"
+                        Padding="15"
+                        Margin="0,20,0,0">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Easing Function Description" FontAttributes="Bold" />
+                        <Label x:Name="EasingDescriptionLabel" 
+                               Text="Linear: Uses a constant velocity and is the default easing function."
+                               TextType="Html" />
+
+                        <Label Text="Visual Guide" FontAttributes="Bold" Margin="0,10,0,0" />
+                        <Image x:Name="EasingGraphImage" 
+                               Source="easing_linear.png"
+                               HeightRequest="100"
+                               HorizontalOptions="Center"
+                               IsVisible="false" />
+
+                        <Label Text="Note: Graphs are conceptual representations of easing functions"
+                               FontSize="12"
+                               TextColor="Gray"
+                               IsVisible="{Binding Source={x:Reference EasingGraphImage}, Path=IsVisible}" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+    
+    

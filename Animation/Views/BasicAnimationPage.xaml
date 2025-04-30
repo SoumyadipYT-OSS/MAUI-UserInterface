@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Animation.Views.BasicAnimationPage"
+             Title="Basic Animations">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <Label Text="Basic Animation Examples"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20" />
+
+            <!-- Fade Animation -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    StrokeShape="Rectangle"
+                    Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Fade Animation" FontAttributes="Bold" />
+                    <Button x:Name="FadeButton"
+                            Text="Fade In/Out"
+                            Clicked="OnFadeClicked" />
+                    <BoxView x:Name="FadeBox"
+                             Color="MediumPurple"
+                             HeightRequest="50"
+                             Opacity="0.3" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Rotation Animation -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    StrokeShape="Rectangle"
+                    Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Rotation Animation" FontAttributes="Bold" />
+                    <Button x:Name="RotateButton"
+                            Text="Rotate"
+                            Clicked="OnRotateClicked" />
+                    <Image x:Name="RotateImage"
+                           Source="dotnet_bot.png"
+                           HeightRequest="100"
+                           WidthRequest="100"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Scale Animation -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    StrokeShape="Rectangle"
+                    Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Scale Animation" FontAttributes="Bold" />
+                    <Button x:Name="ScaleButton"
+                            Text="Scale Up/Down"
+                            Clicked="OnScaleClicked" />
+                    <Border x:Name="ScaleBox"
+                            StrokeShape="RoundRectangle 10"
+                            Stroke="DarkBlue"
+                            StrokeThickness="4"
+                            BackgroundColor="LightBlue"
+                            HeightRequest="80"
+                            WidthRequest="80"
+                            HorizontalOptions="Center">
+                        <Label Text="Scale Me"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Border>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Translation Animation -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    StrokeShape="Rectangle"
+                    Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Translation Animation" FontAttributes="Bold" />
+                    <Button x:Name="TranslateButton"
+                            Text="Translate"
+                            Clicked="OnTranslateClicked" />
+                    <Grid HeightRequest="100">
+                        <BoxView x:Name="TranslateBox"
+                                 Color="Coral"
+                                 WidthRequest="50"
+                                 HeightRequest="50"
+                                 HorizontalOptions="Start" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Combined Animation -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    StrokeShape="Rectangle"
+                    Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Combined Animation" FontAttributes="Bold" />
+                    <Button x:Name="CombinedButton"
+                            Text="Animate All"
+                            Clicked="OnCombinedClicked" />
+                    <Image x:Name="CombinedImage"
+                           Source="dotnet_bot.png"
+                           HeightRequest="100"
+                           WidthRequest="100"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

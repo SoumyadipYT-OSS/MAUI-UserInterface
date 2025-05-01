@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Display_pop_ups.MainPage"
+             xmlns:main="clr-namespace:Display_pop_ups"
+             x:DataType="main:MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Display Pop-Ups" FontSize="Title" Margin="0,0,0,10"
+               HorizontalOptions="Center" VerticalOptions="Start" />
+
+            <Button Text="Display an alert" MaximumWidthRequest="200" MaximumHeightRequest="100"
+                HorizontalOptions="Center" Clicked="OnDisplayAlertClicked" Margin="0,0,0,10" />
+
+            <Button Text="Display Question Alert" MaximumWidthRequest="200" MaximumHeightRequest="100"
+                    HorizontalOptions="Center" Clicked="OnBasicPopupClicked" Margin="0,0,0,10" />
+
+            <Button Text="Guide users through tasks" MaximumWidthRequest="200" MaximumHeightRequest="100"
+                    HorizontalOptions="Center" Clicked="OnGuideUsersClicked" Margin="0,0,0,10" />
+
+            <Button Text="Display a prompt" MaximumWidthRequest="200" MaximumHeightRequest="100" 
+                    HorizontalOptions="Center" Clicked="OnDisplayPromptClicked" Margin="0,0,0,10" />
+
+            <Button Text="Write a value" MaximumWidthRequest="200" MaximumHeightRequest="100" 
+                    HorizontalOptions="Center" Clicked="OnDisplayPromptWithValueClicked" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
+
+    
